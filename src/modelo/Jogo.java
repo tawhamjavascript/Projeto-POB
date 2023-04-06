@@ -1,7 +1,7 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 package modelo;
 
@@ -18,7 +18,7 @@ public class Jogo {
 	private ArrayList<Ingresso> ingressos = new ArrayList<>();
 
 	public Jogo(String data, String local, int estoque, double preco) {
-		//id será gerado pelo banco;
+		//id serï¿½ gerado pelo banco;
 		this.data = data;
 		this.local = local;
 		this.estoque = estoque;
@@ -101,6 +101,11 @@ public class Jogo {
 
 	public ArrayList<Ingresso> getIngressos() {
 		return ingressos;
+	}
+
+	public void setIngressos(Ingresso ingresso) {
+		this.ingressos.add(ingresso);
+
 	}
 	@Override
 	public String toString() {

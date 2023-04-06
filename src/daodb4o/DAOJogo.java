@@ -21,53 +21,22 @@ public class DAOJogo extends DAO<Jogo> {
 
     }
 
-
-    public List<Jogo> matchesOfADate(String data) {
+    public List<Jogo> jogosComUmaDataEspecifica(String data) {
         Query q = manager.query();
         q.constrain(Jogo.class);
         q.descend("data").constrain(data);
-        List<Jogo> result = q.execute();
-        if(result.size() > 0) {
-            return result;
-        }
-        return null;
-    }
-
-    public List<Jogo> matchesOfALocal(String local) {
-        Query q = manager.query();
-        q.constrain(Jogo.class);
-        q.descend("local").constrain(local);
-        List<Jogo> result = q.execute();
-        if(result.size() > 0) {
-            return result;
-        }
-        return null;
-
+        return q.execute();
     }
 
     public List<Jogo> matchesOfATeam(String time) {
         Query q = manager.query();
-        Query q2 = manager.query();
         q.constrain(Jogo.class);
-        q2.constrain(Jogo.class);
-        q.descend("time1").constrain(time);
-        q2.descend("time2").constrain(time);
-        List<Jogo> result = q.execute();
-        List<Jogo> result2 = q2.execute();
-
-        if(result.size() == 0 && result2.size() == 0) {
-            return null;
-        }
-
-        if (result.size() == 0) return result2;
-        if (result2.size() == 0) return result;
-
-        result.addAll(result2);
-        return result;
+        q.descend("time1").constrain(time).or(q.descend("time2").constrain(time));
+        return q.execute();
     }
 
 
-    public List<Jogo> availableMatches(int n){
+    public List<Jogo> JogosComMaisDeUmIngesso(){
         Query q = manager.query();
         q.constrain(Jogo.class);
         q.constrain(new Filtro());
@@ -79,7 +48,7 @@ public class DAOJogo extends DAO<Jogo> {
 
         public void evaluate(Candidate candidate) {
             Jogo jogo = (Jogo) candidate.getObject();
-            candidate.include(jogo.getEstoque() > 0);
+            candidate.include(jogo.getIngressos().size() > 0);
         }
     }
 }

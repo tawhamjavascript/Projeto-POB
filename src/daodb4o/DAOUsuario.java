@@ -32,15 +32,5 @@ public class DAOUsuario extends DAO<Usuario>{
 	//  consultas
 	//--------------------------------------------
 
-	public Usuario searchPerEmail(String email) {
-		Query q = manager.query();
-		q.constrain(Usuario.class);
-		q.descend("email").constrain(email);
-		List<Usuario> result = q.execute();
-		if (result.size() > 0) {
-			return result.get(0);
-		}
-		return null;
-	}
 }
 

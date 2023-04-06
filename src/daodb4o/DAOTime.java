@@ -1,7 +1,10 @@
 package daodb4o;
 
 
+import com.db4o.query.Candidate;
+import com.db4o.query.Evaluation;
 import com.db4o.query.Query;
+import modelo.Jogo;
 import modelo.Time;
 
 import java.util.List;
@@ -13,21 +16,32 @@ public class DAOTime extends DAO<Time> {
         q.constrain(Time.class);
         q.descend("nome").constrain(name);
         List<Time> result = q.execute();
-        if (result.size() > 0) {
-            return result.get(0);
-        }
-        return null;
+
+        return result.get(0);
     }
 
-    public List<Time> allTeamsOfOrigin(String origin) {
+
+    public List<Time> LocalTeam (String local) {
         Query q = manager.query();
         q.constrain(Time.class);
-        q.descend("origem").constrain(origin);
-        List<Time> result = q.execute();
-        if (result.size() > 0) {
-            return result;
-        }
-        return null;
+        q.descend("jogos").descend("local").constrain(local);
+        return q.execute();
+
 
     }
+    public List<Time> DataTeam(String data) {
+        Query q = manager.query();
+        q.constrain(Time.class);
+        q.descend("jogos").descend("data").constrain(data);
+        return q.execute();
+    }
+
+    public List<Time> TimesQuePossuemIngressosDisponiveis() {
+        Query q = manager.query();
+        q.constrain(Time.class);
+        q.descend("jogos").descend("estoque").constrain(0).greater();
+        return q.execute();
+    }
+
+
 }

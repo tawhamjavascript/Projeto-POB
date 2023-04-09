@@ -1,8 +1,3 @@
-/**********************************
- * IFPB - Curso Superior de Tec. em Sist. para Internet
- * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
- **********************************/
 package appswing;
 
 import java.awt.Color;

@@ -14,11 +14,8 @@ public class DAOJogo extends DAO<Jogo> {
         q.constrain(Jogo.class);
         q.descend("id").constrain(id);
         List<Jogo> result = q.execute();
-        if (result.size() > 0) {
-            return result.get(0);
-        }
+        if (result.size() > 0) return result.get(0);
         return null;
-
     }
 
     public List<Jogo> jogosComUmaDataEspecifica(String data) {

@@ -9,14 +9,15 @@ import regras_negocio.Fachada;
  */
 public class Cadastrar {
 	public static void main(String[] args) {
-		Fachada.inicializar();
 		try {
+			Fachada.inicializar();
 			Fachada.criarTime("brasil", "br");
 			Fachada.criarTime("argentina", "ar");
 			Fachada.criarTime("chile", "ch");	
 			Fachada.criarTime("bolivia", "bo");	
 		}
 		catch(Exception ex) {
+			ex.printStackTrace();
 			System.out.println("problema ao criar time-->"+ex.getMessage());
 		}
 

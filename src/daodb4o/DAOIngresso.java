@@ -15,6 +15,9 @@ public class DAOIngresso extends DAO<Ingresso> {
         q.constrain(Ingresso.class);
         q.descend("codigo").constrain(id);
         List<Ingresso> result = q.execute();
-        return result.get(0);
+        if (result.size() > 0) {
+            return result.get(0);
+        }
+        return null;
     }
 }

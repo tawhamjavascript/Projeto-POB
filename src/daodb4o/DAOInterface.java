@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface DAOInterface<T> {
 	public void create(T obj);
-	public List<T> All();
 	public T read(Object chave);
 	public T update(T obj);
 	public void delete(T obj) ;

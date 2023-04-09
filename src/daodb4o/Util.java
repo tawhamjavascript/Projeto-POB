@@ -29,6 +29,8 @@ public class Util {
             if (manager != null)
                 return manager; //ja tem uma conexao
 
+            System.out.println(contador);
+
 //---------------------------------------------------------------
 //configurar, criar e conectar banco local (na pasta do projeto
 //---------------------------------------------------------------
@@ -89,6 +91,7 @@ public class Util {
 
 //conexao local
             manager = Db4oEmbedded.openFile(config, "banco.db4o");
+            System.out.println(manager);
             return manager;
         }
 

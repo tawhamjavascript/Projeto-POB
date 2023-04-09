@@ -16,8 +16,10 @@ public class DAOTime extends DAO<Time> {
         q.constrain(Time.class);
         q.descend("nome").constrain(name);
         List<Time> result = q.execute();
-
-        return result.get(0);
+        if (result.size() > 0) {
+            return result.get(0);
+        }
+        return null;
     }
 
 

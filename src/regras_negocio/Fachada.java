@@ -7,6 +7,7 @@
 package regras_negocio;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -42,42 +43,61 @@ public class Fachada {
 	}
 
 
-	public static ArrayList<Time> listarTimes() {
+	public static List<Time> listarTimes() {
 		//retorna todos os times
-		return (ArrayList<Time>) daotime.readAll();
-
+		DAO.begin();
+		List<Time> result = daotime.readAll();
+		DAO.commit();
+		return result;
 
 	}
 
-	public static ArrayList<Jogo> listarJogos() {
+	public static List<Jogo> listarJogos() {
 		//retorna todos os jogos
-		return (ArrayList<Jogo>) daojogo.readAll();
+		DAO.begin();
+		List<Jogo> result = daojogo.readAll();
+		DAO.commit();
+		return result;
+	}
 
+	public static List<Usuario> listarUsuarios() {
+		DAO.begin();
+		List<Usuario> result = daousuario.readAll();
+		DAO.commit();
+		return result;
 
 	}
 
-	public static ArrayList<Usuario> listarUsuarios() {
-		return (ArrayList<Usuario>) daousuario.readAll();
-
+	public static List<Ingresso> listarIngressos() {
+		DAO.begin();
+		List<Ingresso> result = daoingresso.readAll();
+		DAO.commit();
+		return result;
 	}
 
-	public static ArrayList<Ingresso> listarIngressos() {
+	public static List<Jogo> listarJogos(String data) {
+		DAO.begin();
 
-		return (ArrayList<Ingresso>) daoingresso.readAll();
-	}
-
-	public static ArrayList<Jogo> listarJogos(String data) {
 		//retorna os jogos na data fornecida (query)
-		return (ArrayList<Jogo>) daojogo.jogosComUmaDataEspecifica(data);
+		List<Jogo> result = daojogo.jogosComUmaDataEspecifica(data);
+		DAO.commit();
+		return result;
 	}
 
 	public static Ingresso localizarIngresso(int codigo) {
 		//retorna o ingresso com o código fornecido
-		return daoingresso.read(codigo);
+		DAO.begin();
+		Ingresso result = daoingresso.read(codigo);
+		DAO.commit();
+		return result;
+
 	}
 
 	public static Jogo localizarJogo(int id) {
-		return daojogo.read(id);
+		DAO.begin();
+		Jogo jogo = daojogo.read(id);
+		DAO.commit();
+		return jogo;
 	}
 
 	public static Usuario criarUsuario(String email, String senha) throws Exception{
@@ -115,7 +135,7 @@ public class Fachada {
 			DAO.commit();
 			return time;
 		}
-		throw new Exception("Time não existe");
+		throw new Exception("Time já existe");
 	}
 
 	public static Jogo criarJogo(String data, String local, int estoque, double preco, String nometime1, String nometime2)  throws Exception {
@@ -138,8 +158,10 @@ public class Fachada {
 				jogo.setTime2(time2);
 				time1.adicionar(jogo);
 				time2.adicionar(jogo);
-				jogo.setId(daotime.gerarId());
+				jogo.setId(daojogo.gerarId());
 				daojogo.create(jogo);
+				daotime.update(time1);
+				daotime.update(time2);
 				DAO.commit();
 				return jogo;
 
@@ -307,42 +329,52 @@ public class Fachada {
 	/**********************************
 	 * 5 Consultas
 	 **********************************/
-	public static ArrayList<Time> timesQueJogaramEmUmLocal(String local) throws Exception{
-		ArrayList<Time> times = (ArrayList<Time>) daotime.LocalTeam(local);
+	public static List<Time> timesQueJogaramEmUmLocal(String local) throws Exception{
+		DAO.begin();
+		List<Time> times = daotime.LocalTeam(local);
 		if (times.size() == 0) {
-			throw new Exception("Não existe times que jogaram no time informado");
+			throw new Exception("Não existe times que jogaram no local informado");
 		}
+		DAO.commit();
 		return times;
 	}
 
-	public static ArrayList<Time> timesQueJogaramEmUmaData(String data) throws Exception {
-		ArrayList<Time> times = (ArrayList<Time>) daotime.DataTeam(data);
+	public static List<Time> timesQueJogaramEmUmaData(String data) throws Exception {
+		DAO.begin();
+		List<Time> times = daotime.DataTeam(data);
 		if (times.size() == 0) {
 			throw new Exception("Não existe times que jogaram nessa data");
 		}
+		DAO.commit();
 		return times;
  	}
-	public static ArrayList<Time> TimesQuePossuemIngressosDisponiveis() throws Exception {
-		ArrayList<Time> times = (ArrayList<Time>) daotime.TimesQuePossuemIngressosDisponiveis();
+	public static List<Time> TimesQuePossuemIngressosDisponiveis() throws Exception {
+		DAO.begin();
+		List<Time> times = daotime.TimesQuePossuemIngressosDisponiveis();
 		if (times.size() == 0) {
 			throw new Exception("Não possuem times com jogos disponíveis");
 		}
+		DAO.commit();
 		return times;
 	}
 
-	public static ArrayList<Jogo> JogosDeUmTimeEspecifico(String time) throws Exception {
-		ArrayList<Jogo> jogos = (ArrayList<Jogo>) daojogo.matchesOfATeam(time);
+	public static List<Jogo> JogosDeUmTimeEspecifico(String time) throws Exception {
+		DAO.begin();
+		List<Jogo> jogos = daojogo.matchesOfATeam(time);
 		if (jogos.size() == 0) {
 			throw new Exception("Não existe jogos com esse time");
 		}
+		DAO.commit();
 		return jogos;
 	}
 
-	public static ArrayList<Jogo> jogosComMaisDeUmIngresso() throws Exception {
-		ArrayList<Jogo> jogos = (ArrayList<Jogo>) daojogo.JogosComMaisDeUmIngesso();
+	public static List<Jogo> jogosComMaisDeUmIngresso() throws Exception {
+		DAO.begin();
+		List<Jogo> jogos = daojogo.JogosComMaisDeUmIngesso();
 		if (jogos.size() == 0) {
-			throw new Exception("Não existe jogos com maid de um ingresso");
+			throw new Exception("Não existe jogos com mais de um ingresso");
 		}
+		DAO.commit();
 		return jogos;
 	}
 }

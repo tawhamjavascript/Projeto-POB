@@ -45,7 +45,7 @@ public class TelaConsulta {
 
 	private ObjectContainer manager;
 	private JComboBox comboBox;
-	
+
 
 	/**
 	 * Launch the application.
@@ -69,7 +69,7 @@ public class TelaConsulta {
 	public TelaConsulta() {
 		initialize();
 		frmConsultas.setVisible(true);
-	
+
 	}
 
 	/**
@@ -86,19 +86,20 @@ public class TelaConsulta {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				Fachada.inicializar();
-			
+
 			}
+
 			@Override
 			public void windowClosing(WindowEvent e) {
 				Fachada.finalizar();
 			}
-		
+
 		});
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(21, 68, 674, 229);
 		frmConsultas.getContentPane().add(scrollPane);
-		
+
 		table = new JTable();
 		scrollPane.setViewportView(table);
 		table.addMouseListener(new MouseAdapter() {
@@ -107,7 +108,7 @@ public class TelaConsulta {
 				lblResultadosDaConsulta.setText("selecionado="+ (String) table.getValueAt( table.getSelectedRow(), 0));
 			}
 		});
-		
+
 		table.setGridColor(Color.BLACK);
 		table.setRequestFocusEnabled(false);
 		table.setFocusable(false);
@@ -119,141 +120,170 @@ public class TelaConsulta {
 		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		table.setShowGrid(true);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-		
-		label = new JLabel("");		//label de mensagem
+
+		label = new JLabel("");        //label de mensagem
 		label.setForeground(Color.BLUE);
 		label.setBounds(21, 321, 688, 14);
 		frmConsultas.getContentPane().add(label);
-		
+
 		lblResultadosDaConsulta = new JLabel("Resultados da consulta:");
 		lblResultadosDaConsulta.setBounds(21, 43, 431, 14);
 		frmConsultas.getContentPane().add(lblResultadosDaConsulta);
-		
+
 		button = new JButton("Consultar");
 		button.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int index = comboBox.getSelectedIndex();
-				if(index<0)
-					lblResultadosDaConsulta.setText("consulta nao selecionada");
-				else
-					switch(index) {
-					case 0:
-						String local = JOptionPane.showInputDialog("Digite o local");
-						ArrayList<Time> resultado1 = Fachada.timesQueJogaramEmUmLocal(local);
-						consultaLocalTime(resultado1);
-						break;
-					case 1: 
-						String data = JOptionPane.showInputDialog("Digite o modelo");
-						ArrayList<Time> resultado2 = Fachada.timesQueJogaramEmUmaData(data);
-						consultaDataTime(resultado2);
-						break;
-					case 2: 
-						ArrayList<Time> resultado3 = Fachada.timesQuePossuemIngressosDisponiveis();
-						consultaIngressos(resultado3);
-						break;
-					case 3: 
-						String time = JOptionPane.showInputDialog("Digite o Time");
-						ArrayList<Jogo> resultado4 = Fachada.jogosDeUmTimeEspecifico(time);
-						consultaJogosTime(resultado4);
-						break;
-					case 4: 
-						ArrayList<Jogo> resultado5 = Fachada.jogosComMaisDeUmIngresso(numero);
-						consultaMaisDeUm(resultado5);
-						break;
+									 public void actionPerformed(ActionEvent e) {
+										 int index = comboBox.getSelectedIndex();
+										 if(index<0)
+											 lblResultadosDaConsulta.setText("consulta nao selecionada");
+										 else
+											 switch(index) {
+												 case 0:
+													 String local = JOptionPane.showInputDialog("Digite o local");
+													 try {
+														 List<Time> resultado1 = Fachada.timesQueJogaramEmUmLocal(local);
+														 consultaLocalTime(resultado1);
 
-					}
-			}
+													 } catch (Exception err) {
+														 System.out.println(err);
+													 }
+
+													 break;
+												 case 1:
+													 String data = JOptionPane.showInputDialog("Digite o modelo");
+													 try {
+														 List<Time> resultado2 = Fachada.timesQueJogaramEmUmaData(data);
+														 consultaDataTime(resultado2);
+
+													 } catch (Exception err) {
+														 System.out.println(err);
+													 }
+
+													 break;
+												 case 2:
+													 try {
+														 List<Time> resultado3 = Fachada.timesQuePossuemIngressosDisponiveis();
+														 consultaIngressos(resultado3);
+													 } catch (Exception err) {
+														 System.out.println(err);
+													 }
+
+													 break;
+												 case 3:
+													 try {
+														 String time = JOptionPane.showInputDialog("Digite o Time");
+														 List<Jogo> resultado4 = Fachada.jogosDeUmTimeEspecifico(time);
+														 consultaJogosTime(resultado4);
+
+													 } catch (Exception err) {
+														 System.out.println(err);
+													 }
+
+													 break;
+												 case 4:
+													 try {
+														 List<Jogo> resultado5 = Fachada.jogosComMaisDeUmIngresso();
+														 consultaMaisDeUm(resultado5);
+
+													 }
+													 catch (Exception err) {
+														 System.out.println(err);
+													 }
+
+													 break;
+
+										     }
+									 }
 		});
-		
-		button.setBounds(606, 10, 89, 23);
-		frmConsultas.getContentPane().add(button);
+
+        button.setBounds(606, 10, 89, 23);
+        frmConsultas.getContentPane().add(button);
 
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Times que jogaram em um local", "Times que jogaram em uma data", "Times que possuem ingressos disponíveis","Jogos de um time específico", "Jogos com mais de um ingresso"}));
-		comboBox.setBounds(21, 10, 513, 22);
-		frmConsultas.getContentPane().add(comboBox);
+        comboBox.setModel(new DefaultComboBoxModel(new String[] {"Times que jogaram em um local", "Times que jogaram em uma data", "Times que possuem ingressos disponíveis","Jogos de um time específico", "Jogos com mais de um ingresso"}));
+        comboBox.setBounds(21, 10, 513, 22);
+        frmConsultas.getContentPane().add(comboBox);
 	}
-		
-		
-		
-		/**
-		 * CONSULTA 1 timesQueJogaramEmUmLocal
-		 **/
-		
-	public void consultaLocalTime(ArrayList<Time> lista) {
-		try{
-			// o model armazena todas as linhas e colunas do table
-			DefaultTableModel model = new DefaultTableModel();
-			
-			//adicionar colunas no model
-			
-			model.addColumn("nome");
-			model.addColumn("origem");
-			model.addColumn("jogos");
-			
-			//adicionar linhas no model
-			
-			for (Time time : lista) {
-				model.addRow(new Object[]{time.getNome(), time.getOrigem(), time.getJogos()});
+
+
+				/**
+				 * CONSULTA 1 timesQueJogaramEmUmLocal
+				 **/
+
+		public void consultaLocalTime(List<Time> lista) {
+			try{
+				// o model armazena todas as linhas e colunas do table
+				DefaultTableModel model = new DefaultTableModel();
+
+				//adicionar colunas no model
+
+				model.addColumn("nome");
+				model.addColumn("origem");
+				model.addColumn("jogos");
+
+				//adicionar linhas no model
+
+				for (Time time : lista) {
+					model.addRow(new Object[]{time.getNome(), time.getOrigem(), time.getJogos()});
+				}
+
+				//atualizar model no table(visualizacao)
+
+				table.setModel(model);
+
+				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
+			} catch(Exception erro) {
+				label.setText(erro.getMessage());
+
+
 			}
-			
-			//atualizar model no table(visualizacao)
-			
-			table.setModel(model);
-			
-			lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
 		}
-		catch(Exception erro) {
-			label.setText(erro.getMessage());
-		
-			
+
+		public void consultaDataTime(List<Time> lista) {
+
+			try {
+				DefaultTableModel model = new DefaultTableModel();
+
+				model.addColumn("nome");
+				model.addColumn("data");
+
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+
 		}
-	}
-	
-	public void consultaDataTime(ArrayList<Time> lista) {
-	
-		try {
-			DefaultTableModel model = new DefaultTableModel();
-		
-			model.addColumn("nome");
-			model.addColumn("data");
-			
+
+		public void consultaIngressos(List<Time> lista) {
+
 		}
-		
+
+		public void consultaJogosTime(List<Jogo> lista) {
+
+		}
+
+		public void consultaMaisDeUm(List<Jogo> lista) {
+
+		}
+
 	}
-	
-	public void consultaIngressos(ArrayList<Time> lista) {
-		
-	}
-	
-	public void consultaJogosTime(ArrayList<Jogo> lista) {
-		
-	}
-	
-	public void consultaMaisDeUm(ArrayList<Jogo> lista) {
-		
-	}
-	
-}
-		/**
-		 * CONSULTA 2 timesQueJogaramEmUmaData
-		 **/
-		
-		
-		
-		/**
-		 * CONSULTA 3 TimesQuePossuemIngressosDisponiveis
-		 **/
-		
-		
-		/**
-		 * CONSULTA 4 JogosDeUmTimeEspecifico
-		 **/
-		
-		
-		/**
-		 * CONSULTA 5 jogosComMaisDeUmIngresso
-		 **/
+/**
+ * CONSULTA 2 timesQueJogaramEmUmaData
+ **/
+
+
+/**
+ * CONSULTA 3 TimesQuePossuemIngressosDisponiveis
+ **/
+
+
+/**
+ * CONSULTA 4 JogosDeUmTimeEspecifico
+ **/
+
+
+/**
+ * CONSULTA 5 jogosComMaisDeUmIngresso
+ **/
 
 

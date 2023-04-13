@@ -348,7 +348,7 @@ public class Fachada {
 		DAO.commit();
 		return times;
  	}
-	public static List<Time> TimesQuePossuemIngressosDisponiveis() throws Exception {
+	public static List<Time> timesQuePossuemIngressosDisponiveis() throws Exception {
 		DAO.begin();
 		List<Time> times = daotime.TimesQuePossuemIngressosDisponiveis();
 		if (times.size() == 0) {
@@ -358,7 +358,7 @@ public class Fachada {
 		return times;
 	}
 
-	public static List<Jogo> JogosDeUmTimeEspecifico(String time) throws Exception {
+	public static List<Jogo> jogosDeUmTimeEspecifico(String time) throws Exception {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.matchesOfATeam(time);
 		if (jogos.size() == 0) {

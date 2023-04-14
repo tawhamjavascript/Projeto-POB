@@ -27,8 +27,10 @@ public class DAOJogo extends DAO<Jogo> {
 
     public List<Jogo> matchesOfATeam(String time) {
         Query q = manager.query();
+        
         q.constrain(Jogo.class);
-        q.descend("time1").constrain(time).or(q.descend("time2").constrain(time));
+        
+        q.descend("time1").descend("nome").constrain(time).or(q.descend("time2").descend("nome").constrain(time));
         return q.execute();
     }
 

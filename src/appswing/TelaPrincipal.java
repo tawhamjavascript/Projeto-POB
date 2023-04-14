@@ -2,7 +2,7 @@ package appswing;
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 
 import java.awt.EventQueue;
@@ -97,7 +97,7 @@ public class TelaPrincipal {
 		mnTime.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//TelaTime tela = new TelaTime();
+				TelaTime tela = new TelaTime();
 			}
 		});
 		menuBar.add(mnTime);
@@ -106,7 +106,7 @@ public class TelaPrincipal {
 		mnConsulta.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//TelaConsulta tela = new TelaConsulta();
+				TelaConsulta tela = new TelaConsulta();
 			}
 		});
 		menuBar.add(mnConsulta);

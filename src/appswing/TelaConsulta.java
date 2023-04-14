@@ -221,11 +221,16 @@ public class TelaConsulta {
 				model.addColumn("nome");
 				model.addColumn("origem");
 				model.addColumn("jogos");
-
+				
 				//adicionar linhas no model
+				String jogosInfo = "";
+			
 
 				for (Time time : lista) {
-					model.addRow(new Object[]{time.getNome(), time.getOrigem(), time.getJogos()});
+					for (Jogo jogo : time.getJogos()) {
+						jogosInfo += jogo.getLocal() +" "+ jogo.getData() +" "+ jogo.getTime1().getNome()+" vs. "+ jogo.getTime2().getNome()+", ";
+					}
+					model.addRow(new Object[]{time.getNome(), time.getOrigem(), jogosInfo});
 				}
 
 				//atualizar model no table(visualizacao)
@@ -246,27 +251,112 @@ public class TelaConsulta {
 				DefaultTableModel model = new DefaultTableModel();
 
 				model.addColumn("nome");
-				model.addColumn("data");
+				model.addColumn("jogos");
+				
+				String jogosInfo = "";
+								
+				
+				for (Time time : lista) {
+					for (Jogo jogo : time.getJogos()) {
+						jogosInfo += jogo.getLocal() +" "+ jogo.getData() +" "+ jogo.getTime1().getNome()+" vs. "+ jogo.getTime2().getNome()+", ";
+					}
+				
+					model.addRow(new Object[]{time.getNome(), jogosInfo});
+				}
+				
+				//atualizar model no table(visualizacao)
 
-			} catch (Exception e) {
-				System.out.println(e);
+				table.setModel(model);
+
+				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
+
+			} catch (Exception erro) {
+				System.out.println(erro.getMessage());
 			}
 
 		}
 
 		public void consultaIngressos(List<Time> lista) {
+			
+			try {
+				DefaultTableModel model = new DefaultTableModel();
+
+				model.addColumn("times");
+				
+				
+				for (Time time : lista) {
+					model.addRow(new Object[]{time.getNome()});
+				}
+				
+				//atualizar model no table(visualizacao)
+
+				table.setModel(model);
+
+				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
+
+			} catch (Exception erro) {
+				System.out.println(erro.getMessage());
+			}
+			
 
 		}
 
 		public void consultaJogosTime(List<Jogo> lista) {
+			try {
+				DefaultTableModel model = new DefaultTableModel();
+
+				model.addColumn("data");
+				model.addColumn("local");
+				model.addColumn("time 1");
+				model.addColumn("time 2");
+				
+				
+				for (Jogo jogo : lista) {
+					model.addRow(new Object[]{jogo.getData(), jogo.getLocal(), jogo.getTime1().getNome(), jogo.getTime2().getNome()});
+				}
+				
+				//atualizar model no table(visualizacao)
+
+				table.setModel(model);
+
+				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
+
+			} catch (Exception erro) {
+				System.out.println(erro.getMessage());
+			}
 
 		}
 
 		public void consultaMaisDeUm(List<Jogo> lista) {
+			try {
+				DefaultTableModel model = new DefaultTableModel();
 
-		}
+				model.addColumn("data");
+				model.addColumn("local");
+				model.addColumn("time 1");
+				model.addColumn("time 2");
+				
+				
+				for (Jogo jogo : lista) {
+					model.addRow(new Object[]{jogo.getData(), jogo.getLocal(), jogo.getTime1().getNome(), jogo.getTime2().getNome()});
+				}
+				
+				//atualizar model no table(visualizacao)
 
-	}
+				table.setModel(model);
+
+				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
+
+			} catch (Exception erro) {
+				System.out.println(erro.getMessage());
+			}
+		}}
+		
+//		public void separarInfor(String inforJogos) {
+//		 
+//		 
+//
+//	}
 /**
  * CONSULTA 2 timesQueJogaramEmUmaData
  **/

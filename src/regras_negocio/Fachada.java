@@ -272,7 +272,7 @@ public class Fachada {
 			for (Jogo j : jogos) {
 				j.remover(grupo);
 				j.setEstoque(j.getEstoque()+1);
-				grupo.remover(j);
+				//grupo.remover(j);
 				daojogo.update(j);
 
 
@@ -361,6 +361,8 @@ public class Fachada {
 	public static List<Jogo> jogosDeUmTimeEspecifico(String time) throws Exception {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.matchesOfATeam(time);
+		System.out.println(jogos);
+		System.out.println(time);
 		if (jogos.size() == 0) {
 			throw new Exception("N�o existe jogos com esse time");
 		}

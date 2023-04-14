@@ -53,8 +53,8 @@ public class Time {
 	public ArrayList<Jogo> getJogos () {
 		return this.jogos;
 	}
-
-	@Override
+	
+		@Override
 	public String toString() {
 		String texto = "nome=" + nome + ", origem=" + origem ;
 		

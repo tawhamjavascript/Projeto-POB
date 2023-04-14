@@ -1,7 +1,7 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 
 package appswing;
@@ -96,7 +96,7 @@ public class TelaLogin {
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 
-		label_2 = new JLabel("New label");
+		label_2 = new JLabel("");
 		label_2.setBounds(24, 151, 198, 14);
 		frame.getContentPane().add(label_2);
 

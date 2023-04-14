@@ -151,7 +151,7 @@ public class TelaConsulta {
 
 													 break;
 												 case 1:
-													 String data = JOptionPane.showInputDialog("Digite o modelo");
+													 String data = JOptionPane.showInputDialog("Digite a data");
 													 try {
 														 List<Time> resultado2 = Fachada.timesQueJogaramEmUmaData(data);
 														 consultaDataTime(resultado2);

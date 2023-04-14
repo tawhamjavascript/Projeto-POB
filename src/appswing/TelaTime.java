@@ -15,7 +15,12 @@ import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.List;
+
 import javax.swing.JTextArea;
+
+import modelo.Time;
+
 import javax.swing.JTable;
 
 
@@ -23,6 +28,7 @@ public class TelaTime {
 
     private JFrame frmTimes;
     private JTable table;
+    private JComboBox<String> comboBox;
 
     /**
      * Launch the application.
@@ -39,6 +45,8 @@ public class TelaTime {
             }
         });
     }
+    
+    
 
     /**
      * Create the application.
@@ -63,14 +71,16 @@ public class TelaTime {
         lblNewLabel.setBounds(10, 11, 46, 14);
         frmTimes.getContentPane().add(lblNewLabel);
 
-        JComboBox comboBox = new JComboBox();
+        comboBox = new JComboBox();
         comboBox.setBounds(10, 27, 267, 32);
+
         frmTimes.getContentPane().add(comboBox);
 
         frmTimes.addWindowListener(new WindowAdapter() {
             @Override
             public void windowOpened(WindowEvent e) {
                 Fachada.inicializar();
+                listarCombo();
 
             }
             @Override
@@ -99,4 +109,14 @@ public class TelaTime {
         lblNewLabel_2.setBounds(10, 70, 97, 16);
         frmTimes.getContentPane().add(lblNewLabel_2);
     }
+    
+
+    
+    public void listarCombo() {
+	  List<Time> times = Fachada.listarTimes();
+	  for (Time time : times) {
+	  	comboBox.addItem(time.getNome());
+	  }
+    }
+    
 }

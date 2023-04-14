@@ -311,7 +311,20 @@ public class TelaJogo {
 		button_2 = new JButton("Apagar jogo");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//falta implementar
+				if (table.getSelectedRow() >= 0){
+					String id = (String) table.getValueAt( table.getSelectedRow(), 0);
+					System.out.println(id);
+					try {
+						Fachada.apagarJogo(Integer.parseInt(id));
+						listagem();
+					} catch (NumberFormatException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
 			}
 		});
 		button_2.setFont(new Font("Tahoma", Font.PLAIN, 12));

@@ -1,7 +1,7 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 
 package regras_negocio;
@@ -85,7 +85,7 @@ public class Fachada {
 	}
 
 	public static Ingresso localizarIngresso(int codigo) {
-		//retorna o ingresso com o código fornecido
+		//retorna o ingresso com o cï¿½digo fornecido
 		DAO.begin();
 		Ingresso result = daoingresso.read(codigo);
 		DAO.commit();
@@ -135,7 +135,7 @@ public class Fachada {
 			DAO.commit();
 			return time;
 		}
-		throw new Exception("Time já existe");
+		throw new Exception("Time jï¿½ existe");
 	}
 
 	public static Jogo criarJogo(String data, String local, int estoque, double preco, String nometime1, String nometime2)  throws Exception {
@@ -150,7 +150,7 @@ public class Fachada {
 			Time time2 = daotime.read(nometime2);
 
 			if (time1 == null || time2 == null) {
-				throw new Exception("Time não existe");
+				throw new Exception("Time nï¿½o existe");
 			}
 
 			else {
@@ -177,11 +177,11 @@ public class Fachada {
 	public static IngressoIndividual criarIngressoIndividual(int id) throws Exception{
 		DAO.begin();
 		//verificar regras de negocio
-		//gerar codigo aleatório
+		//gerar codigo aleatï¿½rio
 
 		Jogo jogo = daojogo.read(id);
 		if (jogo == null) {
-			throw new Exception("Jogo não existe");
+			throw new Exception("Jogo nï¿½o existe");
 
 		}
 
@@ -218,7 +218,7 @@ public class Fachada {
 		for(int id: ids) {
 			jogo = daojogo.read(id);
 			if (jogo == null) {
-				throw new Exception("Um dos jogos informados não existe");
+				throw new Exception("Um dos jogos informados nï¿½o existe");
 			}
 
 			jogos.add(jogo);
@@ -226,7 +226,7 @@ public class Fachada {
 		}
 
 
-		//gerar codigo aleatório
+		//gerar codigo aleatï¿½rio
 		IngressoGrupo ingressoGrupo;
 		int codigo;
 
@@ -264,7 +264,7 @@ public class Fachada {
 		Ingresso ingresso = daoingresso.read(codigo);
 
 		if (ingresso == null) {
-			throw new Exception("Ingresso não existe");
+			throw new Exception("Ingresso nï¿½o existe");
 		}
 
 		if (ingresso instanceof IngressoGrupo grupo) {
@@ -297,7 +297,7 @@ public class Fachada {
 
 		Time time = daotime.read(nome);
 		if (time == null) {
-			throw new Exception("Time não existe");
+			throw new Exception("Time nï¿½o existe");
 
 		}
 
@@ -313,7 +313,7 @@ public class Fachada {
 		DAO.begin();
 		Jogo jogo = daojogo.read(id);
 		if (jogo == null) {
-			throw new Exception("Jogo não existe");
+			throw new Exception("Jogo nÃ£o existe");
 
 		}
 		if (jogo.getIngressos().size() > 0) {
@@ -333,7 +333,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.LocalTeam(local);
 		if (times.size() == 0) {
-			throw new Exception("Não existe times que jogaram no local informado");
+			throw new Exception("Nï¿½o existe times que jogaram no local informado");
 		}
 		DAO.commit();
 		return times;
@@ -343,7 +343,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.DataTeam(data);
 		if (times.size() == 0) {
-			throw new Exception("Não existe times que jogaram nessa data");
+			throw new Exception("Nï¿½o existe times que jogaram nessa data");
 		}
 		DAO.commit();
 		return times;
@@ -352,7 +352,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.TimesQuePossuemIngressosDisponiveis();
 		if (times.size() == 0) {
-			throw new Exception("Não possuem times com jogos disponíveis");
+			throw new Exception("Nï¿½o possuem times com jogos disponï¿½veis");
 		}
 		DAO.commit();
 		return times;
@@ -362,7 +362,7 @@ public class Fachada {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.matchesOfATeam(time);
 		if (jogos.size() == 0) {
-			throw new Exception("Não existe jogos com esse time");
+			throw new Exception("Nï¿½o existe jogos com esse time");
 		}
 		DAO.commit();
 		return jogos;
@@ -372,7 +372,7 @@ public class Fachada {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.JogosComMaisDeUmIngesso();
 		if (jogos.size() == 0) {
-			throw new Exception("Não existe jogos com mais de um ingresso");
+			throw new Exception("Nï¿½o existe jogos com mais de um ingresso");
 		}
 		DAO.commit();
 		return jogos;

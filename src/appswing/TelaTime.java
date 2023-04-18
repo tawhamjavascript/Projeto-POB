@@ -58,6 +58,7 @@ public class TelaTime {
 	 */
 	public TelaTime() {
 		initialize();
+		frmTimes.setVisible(true);
 	}
 
 	/**
@@ -73,7 +74,7 @@ public class TelaTime {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				Fachada.inicializar();
-				listagem();
+			
 			}
 			@Override
 			public void windowClosing(WindowEvent e) {

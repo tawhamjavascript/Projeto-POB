@@ -93,7 +93,7 @@ public class TelaPrincipal {
 		});
 		menuBar.add(mnJogo);
 		
-		mnTime = new JMenu("Time");
+		mnTime = new JMenu("Times");
 		mnTime.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

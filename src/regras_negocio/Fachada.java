@@ -152,6 +152,14 @@ public class Fachada {
 			if (time1 == null || time2 == null) {
 				throw new Exception("Time n�o existe");
 			}
+			
+			if (estoque == 0) {
+				throw new Exception ("O estoque não pode ser 0");
+			}
+			
+			if (preco == 0) {
+				throw new Exception ("O preço não pode ser 0");
+			}
 
 			else {
 				jogo.setTime1(time1);

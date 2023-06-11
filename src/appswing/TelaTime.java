@@ -28,7 +28,6 @@ import javax.swing.JLabel;
 public class TelaTime {
 
 	private JFrame frmTimes;
-	private JTextField textField;
 	private JTable table;
 	private JScrollPane scrollPane;
 	private JTextField textField_1;

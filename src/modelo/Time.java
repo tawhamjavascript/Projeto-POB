@@ -7,9 +7,18 @@ package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+
+@Entity
 public class Time {
+	@Id
 	private String nome;
 	private String origem;
+	
+	@OneToMany(mappedBy="")
 	private ArrayList<Jogo> jogos = new ArrayList<>();
 
 	

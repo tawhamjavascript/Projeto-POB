@@ -7,15 +7,24 @@ package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+
+@Entity
 public class Jogo {
+	@Id
 	private int id;
 	private String data;
 	private String local;
 	private int estoque;
 	private double preco;
+	@ManyToOne
 	private Time time1;
+	@ManyToOne
 	private Time time2;
-	private ArrayList<Ingresso> ingressos = new ArrayList<>();
+	private ArrayList<Ingresso> ingressos = new ArrayList<Ingresso>();
 
 	public Jogo(String data, String local, int estoque, double preco) {
 		//id ser� gerado pelo banco;

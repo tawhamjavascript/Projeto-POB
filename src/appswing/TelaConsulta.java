@@ -227,6 +227,7 @@ public class TelaConsulta {
 			
 
 				for (Time time : lista) {
+					jogosInfo = "";
 					for (Jogo jogo : time.getJogos()) {
 						jogosInfo += jogo.getLocal() +" "+ jogo.getData() +" "+ jogo.getTime1().getNome()+" vs. "+ jogo.getTime2().getNome()+", ";
 					}
@@ -251,12 +252,12 @@ public class TelaConsulta {
 				DefaultTableModel model = new DefaultTableModel();
 
 				model.addColumn("nome");
-				model.addColumn("jogos");
-				
+								
 				String jogosInfo = "";
 								
 				
 				for (Time time : lista) {
+					jogosInfo = "";
 					for (Jogo jogo : time.getJogos()) {
 						jogosInfo += jogo.getLocal() +" "+ jogo.getData() +" "+ jogo.getTime1().getNome()+" vs. "+ jogo.getTime2().getNome()+", ";
 					}

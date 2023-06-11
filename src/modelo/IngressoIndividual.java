@@ -1,10 +1,13 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 package modelo;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class IngressoIndividual extends Ingresso {
 	private Jogo jogo;
 	

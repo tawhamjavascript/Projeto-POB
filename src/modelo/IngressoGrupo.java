@@ -1,12 +1,17 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+
+
+@Entity
 public class IngressoGrupo extends Ingresso {
 	
 	private ArrayList<Jogo> jogos = new ArrayList<>();

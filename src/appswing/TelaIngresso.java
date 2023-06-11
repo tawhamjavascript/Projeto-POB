@@ -190,7 +190,11 @@ public class TelaIngresso {
 					do{
 						try {
 							id = JOptionPane.showInputDialog("digite o id do jogo ou <enter>");
-							lista.add(Integer.parseInt(id));
+							String[] splittedInput = id.split(",");
+							for (String number : splittedInput) {
+								lista.add(Integer.parseInt(number));
+
+							}
 						}
 						catch(NumberFormatException ex) {
 							label.setText("id nao numerico:");

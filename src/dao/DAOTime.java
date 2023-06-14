@@ -1,49 +1,55 @@
 package dao;
 
 
-import com.db4o.query.Candidate;
-import com.db4o.query.Evaluation;
-import com.db4o.query.Query;
-import modelo.Jogo;
+
 import modelo.Time;
 
 import java.util.List;
 
+import jakarta.persistence.TypedQuery;
+
 public class DAOTime extends DAO<Time> {
     public Time read(Object chave) {
-        String name = (String) chave;
-        Query q = manager.query();
-        q.constrain(Time.class);
-        q.descend("nome").constrain(name);
-        List<Time> result = q.execute();
-        if (result.size() > 0) {
-            return result.get(0);
-        }
-        return null;
+    	String name = (String) chave;
+		try {
+			TypedQuery<Time> q = manager.createQuery("select t from Time t where t.nome=:s", Time.class);
+			q.setParameter("s", name);
+			return q.getSingleResult();
+		}
+		catch(Exception e) {
+			return null;
+		}
+
     }
 
 
     public List<Time> LocalTeam (String local) {
-        Query q = manager.query();
-        q.constrain(Time.class);
-        q.descend("jogos").descend("local").constrain(local);
-        return q.execute();
+    	TypedQuery<Time> q = manager.createQuery("select t from Time t join t.jogos j where j.local=:s", Time.class);
+		q.setParameter("s", local);
+		return q.getResultList();
+
 
 
     }
     public List<Time> DataTeam(String data) {
-        Query q = manager.query();
-        q.constrain(Time.class);
-        q.descend("jogos").descend("data").constrain(data);
-        return q.execute();
+    	TypedQuery<Time> q = manager.createQuery("select t from Time t join t.jogos j where j.data=:s", Time.class);
+		q.setParameter("s", data);
+		return q.getResultList();
+
     }
 
     public List<Time> TimesQuePossuemIngressosDisponiveis() {
-        Query q = manager.query();
-        q.constrain(Time.class);
-        q.descend("jogos").descend("estoque").constrain(0).greater();
-        return q.execute();
+    	TypedQuery<Time> q = manager.createQuery("select t from Time t join t.jogos j where j.estoque > 0", Time.class);
+		return q.getResultList();
+
     }
+
+
+	@Override
+	public List<Time> readAll() {
+		TypedQuery<Time> q = manager.createQuery("select t from Time t", Time.class);
+		return q.getResultList();
+	}
 
 
 }

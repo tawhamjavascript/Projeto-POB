@@ -1,54 +1,56 @@
 package dao;
 
-import com.db4o.query.Candidate;
-import com.db4o.query.Evaluation;
-import com.db4o.query.Query;
+
 import modelo.Jogo;
 
 import java.util.List;
 
+import jakarta.persistence.TypedQuery;
+
 public class DAOJogo extends DAO<Jogo> {
-    public Jogo read(Object chave) {
-        int id = (int) chave;
-        Query q = manager.query();
-        q.constrain(Jogo.class);
-        q.descend("id").constrain(id);
-        List<Jogo> result = q.execute();
-        if (result.size() > 0) return result.get(0);
-        return null;
-    }
+	public Jogo read(Object chave) {
+		int id = (int) chave;
+		try {
+			TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where j.id=:d", Jogo.class);
+			q.setParameter("d",id);
+			return q.getSingleResult();
+
+		}
+		catch(Exception e) {
+			return null;
+		}
+		
+	}
+
 
     public List<Jogo> jogosComUmaDataEspecifica(String data) {
-        Query q = manager.query();
-        q.constrain(Jogo.class);
-        q.descend("data").constrain(data);
-        return q.execute();
+    	TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where data=:d", Jogo.class);
+		q.setParameter("d", data);
+		return q.getResultList();
+
     }
 
     public List<Jogo> matchesOfATeam(String time) {
-        Query q = manager.query();
-        
-        q.constrain(Jogo.class);
-        
-        q.descend("time1").descend("nome").constrain(time).or(q.descend("time2").descend("nome").constrain(time));
-        return q.execute();
+    	TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j join j.times t where t.nome=:s", Jogo.class);
+		q.setParameter("s", time);
+		return q.getResultList();
+
     }
 
 
     public List<Jogo> JogosComMaisDeUmIngesso(){
-        Query q = manager.query();
-        q.constrain(Jogo.class);
-        q.constrain(new Filtro());
-        return q.execute();
+    	TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where size(j.ingressos) > 0", Jogo.class);
+		return q.getResultList();
+
     }
 
-    class Filtro implements Evaluation {
-        public Filtro() {}
 
-        public void evaluate(Candidate candidate) {
-            Jogo jogo = (Jogo) candidate.getObject();
-            candidate.include(jogo.getIngressos().size() > 0);
-        }
-    }
+	@Override
+	public List<Jogo> readAll() {
+		TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j", Jogo.class);
+		
+		return q.getResultList();
+	}
+
 }
 

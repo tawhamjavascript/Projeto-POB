@@ -103,8 +103,8 @@ public class Fachada {
 	public static Usuario criarUsuario(String email, String senha) throws Exception{
 		DAO.begin();
 		Usuario usu = daousuario.read(email);
-		if (usu!=null)
-			throw new Exception("Usuario ja cadastrado:" + email);
+		if (usu != null)
+			throw new Exception("Usuario já cadastrado:" + email);
 		usu = new Usuario(email, senha);
 
 		daousuario.create(usu);
@@ -135,7 +135,7 @@ public class Fachada {
 			DAO.commit();
 			return time;
 		}
-		throw new Exception("Time j� existe");
+		throw new Exception("Time já existe");
 	}
 
 	public static Jogo criarJogo(String data, String local, int estoque, double preco, String nometime1, String nometime2)  throws Exception {
@@ -150,7 +150,7 @@ public class Fachada {
 			Time time2 = daotime.read(nometime2);
 
 			if (time1 == null || time2 == null) {
-				throw new Exception("Time n�o existe");
+				throw new Exception("Time não existe");
 			}
 			
 			if (estoque == 0) {
@@ -166,7 +166,6 @@ public class Fachada {
 				jogo.setTime2(time2);
 				time1.adicionar(jogo);
 				time2.adicionar(jogo);
-				jogo.setId(daojogo.gerarId());
 				daojogo.create(jogo);
 				daotime.update(time1);
 				daotime.update(time2);
@@ -189,9 +188,10 @@ public class Fachada {
 
 		Jogo jogo = daojogo.read(id);
 		if (jogo == null) {
-			throw new Exception("Jogo n�o existe");
+			throw new Exception("Jogo não existe");
 
 		}
+		System.out.println(jogo.getEstoque());
 
 		IngressoIndividual ingressoIndividual;
 		int codigo;
@@ -207,13 +207,24 @@ public class Fachada {
 
 		ingressoIndividual = new IngressoIndividual(codigo);
 		//relacionar este ingresso com o jogo e vice-versa
+
 		ingressoIndividual.setJogo(jogo);
 		jogo.adicionar(ingressoIndividual);
-		jogo.setEstoque(jogo.getEstoque()-1);
 		daoingressoindividual.create(ingressoIndividual);
 		daojogo.update(jogo);
 		//gravar ingresso no banco
-		DAO.commit();
+		try{
+			DAO.commit();
+
+		}
+		catch(Exception e) {
+			System.out.println(e.getStackTrace());
+			System.out.println(e.getMessage());
+			DAO.rollback();
+			throw e;
+		}
+		
+		System.out.println("aqui3");
 
 		return ingressoIndividual;
 
@@ -226,7 +237,7 @@ public class Fachada {
 		for(int id: ids) {
 			jogo = daojogo.read(id);
 			if (jogo == null) {
-				throw new Exception("Um dos jogos informados n�o existe");
+				throw new Exception("Um dos jogos informados não existe");
 			}
 
 			jogos.add(jogo);
@@ -341,7 +352,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.LocalTeam(local);
 		if (times.size() == 0) {
-			throw new Exception("N�o existe times que jogaram no local informado");
+			throw new Exception("Não existe times que jogaram no local informado");
 		}
 		DAO.commit();
 		return times;
@@ -351,7 +362,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.DataTeam(data);
 		if (times.size() == 0) {
-			throw new Exception("N�o existe times que jogaram nessa data");
+			throw new Exception("Não existe times que jogaram nessa data");
 		}
 		DAO.commit();
 		return times;
@@ -360,7 +371,7 @@ public class Fachada {
 		DAO.begin();
 		List<Time> times = daotime.TimesQuePossuemIngressosDisponiveis();
 		if (times.size() == 0) {
-			throw new Exception("N�o possuem times com jogos dispon�veis");
+			throw new Exception("Não possuem times com jogos disponíveis");
 		}
 		DAO.commit();
 		return times;
@@ -372,7 +383,7 @@ public class Fachada {
 		System.out.println(jogos);
 		System.out.println(time);
 		if (jogos.size() == 0) {
-			throw new Exception("N�o existe jogos com esse time");
+			throw new Exception("Não existe jogos com esse time");
 		}
 		DAO.commit();
 		return jogos;
@@ -382,7 +393,7 @@ public class Fachada {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.JogosComMaisDeUmIngesso();
 		if (jogos.size() == 0) {
-			throw new Exception("N�o existe jogos com mais de um ingresso");
+			throw new Exception("Não existe jogos com mais de um ingresso");
 		}
 		DAO.commit();
 		return jogos;

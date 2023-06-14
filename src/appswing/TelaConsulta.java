@@ -26,7 +26,6 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
-import com.db4o.ObjectContainer;
 
 import javax.swing.JFrame;
 
@@ -43,7 +42,6 @@ public class TelaConsulta {
 	private JLabel label;
 	private JLabel lblResultadosDaConsulta;
 
-	private ObjectContainer manager;
 	private JComboBox comboBox;
 
 

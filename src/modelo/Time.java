@@ -7,9 +7,10 @@ package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 
 
 @Entity
@@ -18,7 +19,11 @@ public class Time {
 	private String nome;
 	private String origem;
 	
-	@OneToMany(mappedBy="")
+	@ManyToMany(mappedBy="times", 
+			cascade= {
+					CascadeType.PERSIST,
+					CascadeType.MERGE
+			})
 	private ArrayList<Jogo> jogos = new ArrayList<>();
 
 	
@@ -26,6 +31,9 @@ public class Time {
 		super();
 		this.nome = nome;
 		this.origem = origem;
+	}
+
+	public Time() {
 	}
 
 	public double obterValorArrecadado() {

@@ -1,0 +1,450 @@
+07:27:49,000  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:27:49,005  INFO DAO:70 - DAO.open - problema de configuracao: inStream parameter is null
+07:28:18,544  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:28:18,552  INFO DAO:70 - DAO.open - problema de configuracao: inStream parameter is null
+07:28:51,273  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:28:51,279  INFO DAO:70 - DAO.open - problema de configuracao: inStream parameter is null
+07:32:59,257  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:32:59,263  INFO DAO:70 - DAO.open - problema de configuracao: inStream parameter is null
+07:33:17,396  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:33:17,410  INFO DAO:70 - DAO.open - problema de configuracao: inStream parameter is null
+07:39:54,530  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:39:54,540  INFO DAO:37 - provedor => eclipselink
+07:39:54,541  INFO DAO:38 - sgbd => postgresql
+07:39:54,541  INFO DAO:39 - ip => localhost
+07:39:54,541  INFO DAO:40 - banco => Championship
+07:39:54,541  INFO DAO:45 - configurando postgresql
+07:39:56,373  INFO DAO:70 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+07:44:06,866  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:44:06,873  INFO DAO:37 - provedor => eclipselink
+07:44:06,873  INFO DAO:38 - sgbd => postgresql
+07:44:06,873  INFO DAO:39 - ip => localhost
+07:44:06,874  INFO DAO:40 - banco => Championship
+07:44:06,874  INFO DAO:45 - configurando postgresql
+07:44:09,381  INFO DAO:70 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+07:46:44,020  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:46:44,034  INFO DAO:37 - provedor => eclipselink
+07:46:44,034  INFO DAO:38 - sgbd => postgresql
+07:46:44,034  INFO DAO:39 - ip => localhost
+07:46:44,035  INFO DAO:40 - banco => Championship
+07:46:44,035  INFO DAO:45 - configurando postgresql
+07:46:45,902  INFO DAO:70 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+07:52:55,014  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:52:55,021  INFO DAO:38 - provedor => eclipselink
+07:52:55,022  INFO DAO:39 - sgbd => postgresql
+07:52:55,023  INFO DAO:40 - ip => localhost
+07:52:55,023  INFO DAO:41 - banco => Championship
+07:52:55,024  INFO DAO:46 - configurando postgresql
+07:52:56,564  INFO DAO:71 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+07:54:58,161  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+07:54:58,168  INFO DAO:39 - provedor => eclipselink
+07:54:58,169  INFO DAO:40 - sgbd => postgresql
+07:54:58,169  INFO DAO:41 - ip => localhost
+07:54:58,169  INFO DAO:42 - banco => Championship
+07:54:58,170  INFO DAO:47 - configurando postgresql
+07:54:59,922  INFO DAO:72 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+08:08:24,763  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:08:24,793  INFO DAO:39 - provedor => eclipselink
+08:08:24,801  INFO DAO:40 - sgbd => postgresql
+08:08:24,804  INFO DAO:41 - ip => localhost
+08:08:24,805  INFO DAO:42 - banco => Championship
+08:08:24,807  INFO DAO:47 - configurando postgresql
+08:08:28,820  INFO DAO:72 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+08:11:52,742  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:11:52,772  INFO DAO:39 - provedor => eclipselink
+08:11:52,773  INFO DAO:40 - sgbd => postgresql
+08:11:52,774  INFO DAO:41 - ip => localhost
+08:11:52,774  INFO DAO:42 - banco => Championship
+08:11:52,774  INFO DAO:48 - configurando postgresql
+08:11:56,414  INFO DAO:74 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+08:13:08,224  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:13:08,234  INFO DAO:39 - provedor => eclipselink
+08:13:08,235  INFO DAO:40 - sgbd => postgresql
+08:13:08,235  INFO DAO:41 - ip => localhost
+08:13:08,235  INFO DAO:42 - banco => Championship
+08:13:08,236  INFO DAO:48 - configurando postgresql
+08:13:11,417  INFO DAO:74 - DAO.open - problema de configuracao: Exception [EclipseLink-28019] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Deployment of PersistenceUnit [eclipselink-postgresql] failed. Close all factories for this PersistenceUnit.
+Internal Exception: Exception [EclipseLink-0] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.IntegrityException
+Descriptor Exceptions: 
+---------------------------------------------------------
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoGrupo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoGrupo.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoGrupo --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Usuario.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Usuario.<init>()
+Descriptor: RelationalDescriptor(modelo.Usuario --> [DatabaseTable(USUARIO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.IngressoIndividual.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.IngressoIndividual.<init>()
+Descriptor: RelationalDescriptor(modelo.IngressoIndividual --> [DatabaseTable(INGRESSO)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Time.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Time.<init>()
+Descriptor: RelationalDescriptor(modelo.Time --> [DatabaseTable(TIME)])
+
+Exception [EclipseLink-63] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DescriptorException
+Exception Description: The instance creation method [modelo.Jogo.<Default Constructor>], with no parameters, does not exist, or is not accessible.
+Internal Exception: java.lang.NoSuchMethodException: modelo.Jogo.<init>()
+Descriptor: RelationalDescriptor(modelo.Jogo --> [DatabaseTable(JOGO)])
+
+Runtime Exceptions: 
+---------------------------------------------------------
+
+08:24:35,995  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:24:36,003  INFO DAO:39 - provedor => eclipselink
+08:24:36,003  INFO DAO:40 - sgbd => postgresql
+08:24:36,003  INFO DAO:41 - ip => localhost
+08:24:36,003  INFO DAO:42 - banco => Championship
+08:24:36,004  INFO DAO:48 - configurando postgresql
+08:46:41,179  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:46:41,185  INFO DAO:39 - provedor => eclipselink
+08:46:41,187  INFO DAO:40 - sgbd => postgresql
+08:46:41,188  INFO DAO:41 - ip => localhost
+08:46:41,189  INFO DAO:42 - banco => Championship
+08:46:41,190  INFO DAO:48 - configurando postgresql
+08:56:08,494  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+08:56:08,506  INFO DAO:39 - provedor => eclipselink
+08:56:08,512  INFO DAO:40 - sgbd => postgresql
+08:56:08,512  INFO DAO:41 - ip => localhost
+08:56:08,512  INFO DAO:42 - banco => Championship
+08:56:08,515  INFO DAO:48 - configurando postgresql
+09:21:03,328  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:21:03,338  INFO DAO:39 - provedor => eclipselink
+09:21:03,339  INFO DAO:40 - sgbd => postgresql
+09:21:03,340  INFO DAO:41 - ip => localhost
+09:21:03,342  INFO DAO:42 - banco => Championship
+09:21:03,342  INFO DAO:48 - configurando postgresql
+09:24:20,648  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:24:20,656  INFO DAO:39 - provedor => eclipselink
+09:24:20,657  INFO DAO:40 - sgbd => postgresql
+09:24:20,658  INFO DAO:41 - ip => localhost
+09:24:20,659  INFO DAO:42 - banco => Championship
+09:24:20,660  INFO DAO:48 - configurando postgresql
+09:25:01,418  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:25:01,435  INFO DAO:39 - provedor => eclipselink
+09:25:01,438  INFO DAO:40 - sgbd => postgresql
+09:25:01,440  INFO DAO:41 - ip => localhost
+09:25:01,440  INFO DAO:42 - banco => Championship
+09:25:01,441  INFO DAO:48 - configurando postgresql
+09:26:07,689  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:26:07,696  INFO DAO:39 - provedor => eclipselink
+09:26:07,696  INFO DAO:40 - sgbd => postgresql
+09:26:07,696  INFO DAO:41 - ip => localhost
+09:26:07,697  INFO DAO:42 - banco => Championship
+09:26:07,698  INFO DAO:48 - configurando postgresql
+09:28:54,589  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:28:54,597  INFO DAO:39 - provedor => eclipselink
+09:28:54,598  INFO DAO:40 - sgbd => postgresql
+09:28:54,599  INFO DAO:41 - ip => localhost
+09:28:54,599  INFO DAO:42 - banco => Championship
+09:28:54,599  INFO DAO:48 - configurando postgresql
+09:31:32,591  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:31:32,600  INFO DAO:39 - provedor => eclipselink
+09:31:32,600  INFO DAO:40 - sgbd => postgresql
+09:31:32,601  INFO DAO:41 - ip => localhost
+09:31:32,601  INFO DAO:42 - banco => Championship
+09:31:32,603  INFO DAO:48 - configurando postgresql
+09:32:28,235  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:32:28,244  INFO DAO:39 - provedor => eclipselink
+09:32:28,244  INFO DAO:40 - sgbd => postgresql
+09:32:28,245  INFO DAO:41 - ip => localhost
+09:32:28,298  INFO DAO:42 - banco => Championship
+09:32:28,299  INFO DAO:48 - configurando postgresql
+09:34:49,935  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:34:49,945  INFO DAO:39 - provedor => eclipselink
+09:34:49,946  INFO DAO:40 - sgbd => postgresql
+09:34:49,946  INFO DAO:41 - ip => localhost
+09:34:49,946  INFO DAO:42 - banco => Championship
+09:34:49,946  INFO DAO:48 - configurando postgresql
+09:38:06,354  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:38:06,365  INFO DAO:39 - provedor => eclipselink
+09:38:06,365  INFO DAO:40 - sgbd => postgresql
+09:38:06,367  INFO DAO:41 - ip => localhost
+09:38:06,367  INFO DAO:42 - banco => Championship
+09:38:06,367  INFO DAO:48 - configurando postgresql
+09:42:07,594  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:42:07,603  INFO DAO:39 - provedor => eclipselink
+09:42:07,603  INFO DAO:40 - sgbd => postgresql
+09:42:07,603  INFO DAO:41 - ip => localhost
+09:42:07,604  INFO DAO:42 - banco => Championship
+09:42:07,604  INFO DAO:48 - configurando postgresql
+09:44:02,178  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:44:02,196  INFO DAO:39 - provedor => eclipselink
+09:44:02,198  INFO DAO:40 - sgbd => postgresql
+09:44:02,209  INFO DAO:41 - ip => localhost
+09:44:02,209  INFO DAO:42 - banco => Championship
+09:44:02,209  INFO DAO:48 - configurando postgresql
+09:46:40,109  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:46:40,122  INFO DAO:39 - provedor => eclipselink
+09:46:40,122  INFO DAO:40 - sgbd => postgresql
+09:46:40,124  INFO DAO:41 - ip => localhost
+09:46:40,125  INFO DAO:42 - banco => Championship
+09:46:40,125  INFO DAO:48 - configurando postgresql
+09:54:10,711  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:54:10,726  INFO DAO:39 - provedor => eclipselink
+09:54:10,726  INFO DAO:40 - sgbd => postgresql
+09:54:10,727  INFO DAO:41 - ip => localhost
+09:54:10,727  INFO DAO:42 - banco => Championship
+09:54:10,728  INFO DAO:48 - configurando postgresql
+09:54:12,226  INFO DAO:74 - DAO.open - problema de configuracao: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: jdk.internal.loader.ClassLoaders$AppClassLoader@1de0aca6
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [eclipselink-postgresql] failed.
+Internal Exception: Exception [EclipseLink-7154] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The attribute [ingressos] in entity class [class modelo.Jogo] has a mappedBy value of [jogos] which does not exist in its owning entity class [class modelo.Ingresso]. If the owning entity class is a @MappedSuperclass, this is invalid, and your attribute should reference the correct subclass.
+09:57:56,571  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+09:57:56,583  INFO DAO:39 - provedor => eclipselink
+09:57:56,584  INFO DAO:40 - sgbd => postgresql
+09:57:56,584  INFO DAO:41 - ip => localhost
+09:57:56,584  INFO DAO:42 - banco => Championship
+09:57:56,585  INFO DAO:48 - configurando postgresql
+10:03:15,494  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+10:03:15,503  INFO DAO:39 - provedor => eclipselink
+10:03:15,504  INFO DAO:40 - sgbd => postgresql
+10:03:15,505  INFO DAO:41 - ip => localhost
+10:03:15,505  INFO DAO:42 - banco => Championship
+10:03:15,506  INFO DAO:48 - configurando postgresql
+10:09:28,675  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+10:09:28,684  INFO DAO:39 - provedor => eclipselink
+10:09:28,686  INFO DAO:40 - sgbd => postgresql
+10:09:28,686  INFO DAO:41 - ip => localhost
+10:09:28,687  INFO DAO:42 - banco => Championship
+10:09:28,687  INFO DAO:48 - configurando postgresql

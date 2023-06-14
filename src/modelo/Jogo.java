@@ -7,23 +7,38 @@ package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 
 
 @Entity
 public class Jogo {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String data;
 	private String local;
 	private int estoque;
 	private double preco;
-	@ManyToOne
-	private Time time1;
-	@ManyToOne
-	private Time time2;
+	
+	
+	@ManyToMany(cascade = {
+			CascadeType.PERSIST,
+			CascadeType.MERGE
+			
+	})
+	private ArrayList<Time> times = new ArrayList<Time>();
+	
+	@ManyToMany(cascade = {
+			CascadeType.PERSIST,
+			CascadeType.MERGE,
+			CascadeType.REMOVE,
+	})
+	
 	private ArrayList<Ingresso> ingressos = new ArrayList<Ingresso>();
 
 	public Jogo(String data, String local, int estoque, double preco) {
@@ -34,6 +49,9 @@ public class Jogo {
 		this.preco = preco;
 	}
 	
+	public Jogo() {
+		//id ser� gerado pelo banco;
+	}
 	public void adicionar(Ingresso i){
 		ingressos.add(i);
 	}
@@ -59,9 +77,6 @@ public class Jogo {
 
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getData() {
 		return data;
@@ -93,19 +108,19 @@ public class Jogo {
 	}
 
 	public Time getTime1() {
-		return time1;
+		return times.get(0);
 	}
 
 	public Time getTime2() {
-		return time2;
+		return times.get(1);
 	}
 	
 	public void setTime1(Time time1) {
-		this.time1 = time1;
+		this.times.add(time1);
 	}
 
 	public void setTime2(Time time2) {
-		this.time2 = time2;
+		this.times.add(time2);
 	}
 
 	public ArrayList<Ingresso> getIngressos() {
@@ -120,7 +135,7 @@ public class Jogo {
 	public String toString() {
 
 		String texto = "id=" + id + ", data=" + data + ", local=" + local + ", estoque=" + estoque + ", preco=" + preco
-				+ ", time1=" + time1.getNome() + " x time2=" + time2.getNome();
+				+ ", time1=" + this.getTime1().getNome() + " x time2=" + this.getTime2().getNome();
 
 		texto += "\ningressos:";
 		for(Ingresso i : ingressos)

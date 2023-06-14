@@ -27,12 +27,14 @@ public class Util {
 				// ler dados do arquivo dados.properties
 				Properties dados = new Properties();
 				logger.info("DAO.open - lendo arquivo dados.properties: ");
-				dados.load(DAO.class.getResourceAsStream("/daojpa/dados.properties"));  //dentro de src
+				dados.load(DAO.class.getResourceAsStream("/dao/dados.properties")); 
+				System.out.println(dados); //dentro de src
 				
 				String provedor = dados.getProperty("provedor") ;
 				String sgbd = dados.getProperty("sgbd");
 				String ip = dados.getProperty("ip");
 				String banco = dados.getProperty("banco");
+
 				
 				logger.info("provedor => "+ provedor);
 				logger.info("sgbd => "+ sgbd);
@@ -41,6 +43,7 @@ public class Util {
 				
 				// reconfigurar algumas propriedades do persistence.xml
 				Properties configuracoes = new Properties();
+
 				if(sgbd.equals("postgresql")) {
 					logger.info("configurando postgresql");
 					configuracoes.setProperty("jakarta.persistence.jdbc.driver",  "org.postgresql.Driver" );
@@ -50,6 +53,7 @@ public class Util {
 					if(provedor.equals("hibernate")) {
 						configuracoes.setProperty("hibernate.dialect",  "org.hibernate.dialect.PostgreSQLDialect" );
 					}
+					System.out.println(configuracoes);
 				}
 				if(sgbd.equals("mysql")) {
 					logger.info("configurando mysql");

@@ -41,8 +41,16 @@ public abstract class DAO<T> implements DAOInterface<T> {
 	public abstract T read(Object chave);	//sobrescrito nas subclasses
 
 	public T update(T obj){
-		manager.merge(obj);
-		return obj;
+		try {
+			manager.merge(obj);
+			return obj;
+
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
 	}
 
 	public void delete(T obj) {
@@ -83,6 +91,7 @@ public abstract class DAO<T> implements DAOInterface<T> {
 	public static void commit(){
 		if(manager.getTransaction().isActive()) {
 			manager.getTransaction().commit();
+			manager.clear();
 		}
 	}
 	public static void rollback(){

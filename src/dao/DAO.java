@@ -16,7 +16,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.LockModeType;
 import jakarta.persistence.Query;
-import jakarta.persistence.TypedQuery;
+
 
 
 public abstract class DAO<T> implements DAOInterface<T> {

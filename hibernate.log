@@ -448,3 +448,261 @@ Exception Description: The attribute [ingressos] in entity class [class modelo.J
 10:09:28,686  INFO DAO:41 - ip => localhost
 10:09:28,687  INFO DAO:42 - banco => Championship
 10:09:28,687  INFO DAO:48 - configurando postgresql
+15:11:30,344  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:11:30,355  INFO DAO:39 - provedor => eclipselink
+15:11:30,356  INFO DAO:40 - sgbd => postgresql
+15:11:30,356  INFO DAO:41 - ip => localhost
+15:11:30,356  INFO DAO:42 - banco => Championship
+15:11:30,357  INFO DAO:48 - configurando postgresql
+15:23:45,189  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:23:45,197  INFO DAO:39 - provedor => eclipselink
+15:23:45,198  INFO DAO:40 - sgbd => postgresql
+15:23:45,198  INFO DAO:41 - ip => localhost
+15:23:45,198  INFO DAO:42 - banco => Championship
+15:23:45,199  INFO DAO:48 - configurando postgresql
+15:28:26,800  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:28:26,821  INFO DAO:39 - provedor => eclipselink
+15:28:26,821  INFO DAO:40 - sgbd => postgresql
+15:28:26,822  INFO DAO:41 - ip => localhost
+15:28:26,822  INFO DAO:42 - banco => Championship
+15:28:26,822  INFO DAO:48 - configurando postgresql
+15:32:46,021  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:32:46,029  INFO DAO:39 - provedor => eclipselink
+15:32:46,030  INFO DAO:40 - sgbd => postgresql
+15:32:46,030  INFO DAO:41 - ip => localhost
+15:32:46,031  INFO DAO:42 - banco => Championship
+15:32:46,031  INFO DAO:48 - configurando postgresql
+15:34:30,681  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:34:30,691  INFO DAO:39 - provedor => eclipselink
+15:34:30,692  INFO DAO:40 - sgbd => postgresql
+15:34:30,693  INFO DAO:41 - ip => localhost
+15:34:30,693  INFO DAO:42 - banco => Championship
+15:34:30,693  INFO DAO:48 - configurando postgresql
+15:37:16,181  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:37:16,193  INFO DAO:39 - provedor => eclipselink
+15:37:16,193  INFO DAO:40 - sgbd => postgresql
+15:37:16,195  INFO DAO:41 - ip => localhost
+15:37:16,196  INFO DAO:42 - banco => Championship
+15:37:16,196  INFO DAO:48 - configurando postgresql
+15:38:28,614  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:38:28,621  INFO DAO:39 - provedor => eclipselink
+15:38:28,622  INFO DAO:40 - sgbd => postgresql
+15:38:28,622  INFO DAO:41 - ip => localhost
+15:38:28,623  INFO DAO:42 - banco => Championship
+15:38:28,623  INFO DAO:48 - configurando postgresql
+15:40:51,487  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:40:51,497  INFO DAO:39 - provedor => eclipselink
+15:40:51,497  INFO DAO:40 - sgbd => postgresql
+15:40:51,498  INFO DAO:41 - ip => localhost
+15:40:51,498  INFO DAO:42 - banco => Championship
+15:40:51,498  INFO DAO:48 - configurando postgresql
+15:43:54,701  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:43:54,709  INFO DAO:39 - provedor => eclipselink
+15:43:54,710  INFO DAO:40 - sgbd => postgresql
+15:43:54,710  INFO DAO:41 - ip => localhost
+15:43:54,712  INFO DAO:42 - banco => Championship
+15:43:54,713  INFO DAO:48 - configurando postgresql
+15:45:11,398  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:45:11,406  INFO DAO:39 - provedor => eclipselink
+15:45:11,406  INFO DAO:40 - sgbd => postgresql
+15:45:11,407  INFO DAO:41 - ip => localhost
+15:45:11,407  INFO DAO:42 - banco => Championship
+15:45:11,407  INFO DAO:48 - configurando postgresql
+15:48:10,935  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:48:10,945  INFO DAO:39 - provedor => eclipselink
+15:48:10,946  INFO DAO:40 - sgbd => postgresql
+15:48:10,946  INFO DAO:41 - ip => localhost
+15:48:10,947  INFO DAO:42 - banco => Championship
+15:48:10,947  INFO DAO:48 - configurando postgresql
+15:49:45,272  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:49:45,291  INFO DAO:39 - provedor => eclipselink
+15:49:45,291  INFO DAO:40 - sgbd => postgresql
+15:49:45,292  INFO DAO:41 - ip => localhost
+15:49:45,292  INFO DAO:42 - banco => Championship
+15:49:45,294  INFO DAO:48 - configurando postgresql
+15:50:35,937  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:50:35,971  INFO DAO:39 - provedor => eclipselink
+15:50:35,972  INFO DAO:40 - sgbd => postgresql
+15:50:35,972  INFO DAO:41 - ip => localhost
+15:50:35,972  INFO DAO:42 - banco => Championship
+15:50:35,973  INFO DAO:48 - configurando postgresql
+15:50:38,931  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:50:38,939  INFO DAO:39 - provedor => eclipselink
+15:50:38,940  INFO DAO:40 - sgbd => postgresql
+15:50:38,940  INFO DAO:41 - ip => localhost
+15:50:38,941  INFO DAO:42 - banco => Championship
+15:50:38,941  INFO DAO:48 - configurando postgresql
+15:51:35,680  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:51:35,692  INFO DAO:39 - provedor => eclipselink
+15:51:35,693  INFO DAO:40 - sgbd => postgresql
+15:51:35,693  INFO DAO:41 - ip => localhost
+15:51:35,693  INFO DAO:42 - banco => Championship
+15:51:35,694  INFO DAO:48 - configurando postgresql
+15:54:01,265  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:54:01,273  INFO DAO:39 - provedor => eclipselink
+15:54:01,274  INFO DAO:40 - sgbd => postgresql
+15:54:01,274  INFO DAO:41 - ip => localhost
+15:54:01,274  INFO DAO:42 - banco => Championship
+15:54:01,275  INFO DAO:48 - configurando postgresql
+15:55:24,471  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+15:55:24,484  INFO DAO:39 - provedor => eclipselink
+15:55:24,485  INFO DAO:40 - sgbd => postgresql
+15:55:24,485  INFO DAO:41 - ip => localhost
+15:55:24,485  INFO DAO:42 - banco => Championship
+15:55:24,485  INFO DAO:48 - configurando postgresql
+16:43:00,323  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+16:43:00,339  INFO DAO:39 - provedor => eclipselink
+16:43:00,340  INFO DAO:40 - sgbd => postgresql
+16:43:00,340  INFO DAO:41 - ip => localhost
+16:43:00,340  INFO DAO:42 - banco => Championship
+16:43:00,341  INFO DAO:48 - configurando postgresql
+16:44:05,083  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+16:44:05,096  INFO DAO:39 - provedor => eclipselink
+16:44:05,096  INFO DAO:40 - sgbd => postgresql
+16:44:05,097  INFO DAO:41 - ip => localhost
+16:44:05,097  INFO DAO:42 - banco => Championship
+16:44:05,097  INFO DAO:48 - configurando postgresql
+17:03:30,551  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:03:30,564  INFO DAO:39 - provedor => eclipselink
+17:03:30,564  INFO DAO:40 - sgbd => postgresql
+17:03:30,564  INFO DAO:41 - ip => localhost
+17:03:30,565  INFO DAO:42 - banco => Championship
+17:03:30,565  INFO DAO:48 - configurando postgresql
+17:05:34,947  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:05:34,957  INFO DAO:39 - provedor => eclipselink
+17:05:34,958  INFO DAO:40 - sgbd => postgresql
+17:05:34,958  INFO DAO:41 - ip => localhost
+17:05:34,959  INFO DAO:42 - banco => Championship
+17:05:34,959  INFO DAO:48 - configurando postgresql
+17:07:06,875  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:07:06,890  INFO DAO:39 - provedor => eclipselink
+17:07:06,892  INFO DAO:40 - sgbd => postgresql
+17:07:06,892  INFO DAO:41 - ip => localhost
+17:07:06,892  INFO DAO:42 - banco => Championship
+17:07:06,895  INFO DAO:48 - configurando postgresql
+17:09:06,977  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:09:06,986  INFO DAO:39 - provedor => eclipselink
+17:09:06,986  INFO DAO:40 - sgbd => postgresql
+17:09:06,987  INFO DAO:41 - ip => localhost
+17:09:06,988  INFO DAO:42 - banco => Championship
+17:09:06,988  INFO DAO:48 - configurando postgresql
+17:18:22,227  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:18:22,238  INFO DAO:39 - provedor => eclipselink
+17:18:22,239  INFO DAO:40 - sgbd => postgresql
+17:18:22,242  INFO DAO:41 - ip => localhost
+17:18:22,242  INFO DAO:42 - banco => Championship
+17:18:22,243  INFO DAO:48 - configurando postgresql
+17:21:27,058  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+17:21:27,073  INFO DAO:39 - provedor => hibernate
+17:21:27,079  INFO DAO:40 - sgbd => postgresql
+17:21:27,079  INFO DAO:41 - ip => localhost
+17:21:27,079  INFO DAO:42 - banco => Championship
+17:21:27,080  INFO DAO:48 - configurando postgresql
+17:21:27,768  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: hibernate-postgresql]
+17:21:28,006  INFO Version:44 - HHH000412: Hibernate ORM core version 6.2.2.Final
+17:21:28,012  INFO Environment:191 - HHH000406: Using bytecode reflection optimizer
+17:21:28,133 DEBUG RegionFactoryInitiator:117 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+17:21:28,136 DEBUG RegionFactoryInitiator:49 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+17:21:28,946  WARN pooling:80 - HHH10001002: Using built-in connection pool (not intended for production use)
+17:21:28,960  INFO pooling:139 - HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+17:21:28,961  INFO pooling:161 - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/Championship]
+17:21:28,961  INFO pooling:170 - HHH10001001: Connection properties: {password=****, user=postgres}
+17:21:28,962  INFO pooling:174 - HHH10001003: Autocommit mode: false
+17:21:28,968  INFO pooling:366 - HHH10001115: Connection pool size: 20 (min=1)
+17:21:29,649  INFO dialect:93 - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@7216fb24
+17:21:30,695  INFO BytecodeProviderInitiator:53 - HHH000021: Bytecode provider name : bytebuddy
+17:21:33,448  INFO JtaPlatformInitiator:51 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:21:33,579  INFO access:52 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7edb6fca] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:21:33,752 DEBUG SQL:133 - 
+    create table Ingresso (
+        DTYPE varchar(31) not null,
+        codigo integer not null,
+        primary key (codigo)
+    )
+17:21:33,849 DEBUG SQL:133 - 
+    create table Jogo (
+        id serial not null,
+        data varchar(255),
+        estoque integer not null,
+        local varchar(255),
+        preco float(53) not null,
+        primary key (id)
+    )
+17:21:33,865 DEBUG SQL:133 - 
+    create table Jogo_Ingresso (
+        jogos_id integer not null,
+        ingressos_codigo integer not null
+    )
+17:21:33,867 DEBUG SQL:133 - 
+    create table Jogo_Time (
+        jogos_id integer not null,
+        times_nome varchar(255) not null
+    )
+17:21:33,870 DEBUG SQL:133 - 
+    create table Time (
+        nome varchar(255) not null,
+        origem varchar(255),
+        primary key (nome)
+    )
+17:21:33,881 DEBUG SQL:133 - 
+    create table Usuario (
+        email varchar(255) not null,
+        senha varchar(255),
+        primary key (email)
+    )
+17:21:33,892 DEBUG SQL:133 - 
+    alter table if exists Jogo_Ingresso 
+       add constraint FK543rwys1j14l6gkqpuaro3nlp 
+       foreign key (ingressos_codigo) 
+       references Ingresso
+17:21:33,898 DEBUG SQL:133 - 
+    alter table if exists Jogo_Ingresso 
+       add constraint FK9gb351dd96gsr95o9k7lldwpa 
+       foreign key (jogos_id) 
+       references Jogo
+17:21:33,903 DEBUG SQL:133 - 
+    alter table if exists Jogo_Time 
+       add constraint FKmhuuip99g61vn2cxau6l1vqh0 
+       foreign key (times_nome) 
+       references Time
+17:21:33,908 DEBUG SQL:133 - 
+    alter table if exists Jogo_Time 
+       add constraint FKqatcg7yjattpn9v7p0swkijom 
+       foreign key (jogos_id) 
+       references Jogo
+17:21:35,211 DEBUG SQL:133 - 
+    select
+        t1_0.nome,
+        t1_0.origem 
+    from
+        Time t1_0 
+    where
+        t1_0.nome=?
+17:21:35,214 TRACE bind:28 - binding parameter [1] as [VARCHAR] - [brasil]
+17:21:35,464 DEBUG SQL:133 - 
+    select
+        j1_0.id,
+        j1_0.data,
+        j1_0.estoque,
+        j1_0.local,
+        j1_0.preco 
+    from
+        Jogo j1_0 
+    where
+        j1_0.id=?
+17:21:35,465 TRACE bind:28 - binding parameter [1] as [INTEGER] - [1]
+17:21:35,486 DEBUG SQL:133 - 
+    select
+        j1_0.id,
+        j1_0.data,
+        j1_0.estoque,
+        j1_0.local,
+        j1_0.preco 
+    from
+        Jogo j1_0 
+    where
+        j1_0.id=?
+17:21:35,486 TRACE bind:28 - binding parameter [1] as [INTEGER] - [1]
+17:21:35,496  INFO pooling:608 - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/Championship]
+17:21:35,510 ERROR pooling:470 - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:postgresql://localhost:5432/Championship
+17:21:35,532 ERROR pooling:301 - Connection leak detected: there are 1 unclosed connections

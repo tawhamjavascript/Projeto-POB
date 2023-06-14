@@ -2,7 +2,6 @@ package dao;
 
 
 import modelo.Ingresso;
-import modelo.Time;
 
 import java.util.List;
 

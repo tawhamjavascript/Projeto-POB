@@ -18,18 +18,22 @@ public class Cadastrar {
 		}
 		catch(Exception ex) {
 			ex.printStackTrace();
-			System.out.println("problema ao criar time-->"+ex.getMessage());
+			System.out.println("problema ao criar time-->" + ex.getMessage());
 		}
 
 		try {
 			Fachada.criarJogo("02/12/2022", "maracana", 10000, 20.0, "brasil", "argentina");
-			Fachada.criarJogo("02/12/2022", "maracana", 10000, 20.0, "chile", "bolivia");
-			Fachada.criarJogo("04/12/2022", "maracana", 10000, 20.0, "brasil", "chile");
-			Fachada.criarJogo("04/12/2022", "maracana", 10000, 20.0, "argentina", "bolivia");
+			Fachada.criarJogo("02/12/2022", "maracana", 10000, 20.0, "chile","bolivia");
+			Fachada.criarJogo("02/12/2022","maracana", 10000, 20.0,"brasil","chile");
+			Fachada.criarJogo("02/12/2022","maracana", 10000, 20.0,"argentina","bolivia");
+
+
+	
 		}
 		catch(Exception ex) {
-			System.out.println("problema ao criar jogo-->"+ex.getMessage());
+			System.out.println("problema ao criar jogo --> " + ex.getMessage());
 		}
+		
 
 		try {
 			Fachada.criarIngressoIndividual(1);		//id do jogo
@@ -49,8 +53,11 @@ public class Cadastrar {
 		catch(Exception ex) {
 			System.out.println("problema ao criar ingresso grupo-->"+ex.getMessage());
 		}
+		
 
 		Fachada.finalizar();
 		System.out.println("\nfim do programa");
+		
 	}
+	
 }

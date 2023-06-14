@@ -5,22 +5,16 @@
  **********************************/
 package modelo;
 
-import java.util.ArrayList;
 
-import jakarta.persistence.CascadeType;
+
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
+
 
 @Entity
 public class IngressoIndividual extends Ingresso {
-	@ManyToMany(mappedBy = "ingressos",
-			cascade = {
-					CascadeType.PERSIST,
-					CascadeType.MERGE
-			})
-	private ArrayList<Jogo> jogos = new ArrayList<Jogo>();
 	
-
+	
 	public IngressoIndividual(int codigo) {
 		super(codigo);
 	}

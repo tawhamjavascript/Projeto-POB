@@ -24,7 +24,7 @@ public class Time {
 					CascadeType.PERSIST,
 					CascadeType.MERGE
 			})
-	private ArrayList<Jogo> jogos = new ArrayList<>();
+	private ArrayList<Jogo> jogos = new ArrayList<Jogo>();
 
 	
 	public Time(String nome, String origem) {

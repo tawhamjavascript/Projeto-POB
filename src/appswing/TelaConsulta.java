@@ -9,10 +9,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
 import java.util.List;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+
+
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -27,7 +26,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
 
-import javax.swing.JFrame;
+
 
 import regras_negocio.Fachada;
 import modelo.Jogo;

@@ -814,3 +814,39 @@ Exception Description: The attribute [ingressos] in entity class [class modelo.J
 21:14:04,561  INFO DAO:41 - ip => localhost
 21:14:04,562  INFO DAO:42 - banco => Championship
 21:14:04,563  INFO DAO:48 - configurando postgresql
+21:21:34,470  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:21:34,480  INFO DAO:39 - provedor => eclipselink
+21:21:34,482  INFO DAO:40 - sgbd => postgresql
+21:21:34,482  INFO DAO:41 - ip => localhost
+21:21:34,484  INFO DAO:42 - banco => Championship
+21:21:34,486  INFO DAO:48 - configurando postgresql
+21:21:46,953  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:21:46,963  INFO DAO:39 - provedor => eclipselink
+21:21:46,963  INFO DAO:40 - sgbd => postgresql
+21:21:46,964  INFO DAO:41 - ip => localhost
+21:21:46,964  INFO DAO:42 - banco => Championship
+21:21:46,965  INFO DAO:48 - configurando postgresql
+21:21:57,163  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:21:57,170  INFO DAO:39 - provedor => eclipselink
+21:21:57,170  INFO DAO:40 - sgbd => postgresql
+21:21:57,171  INFO DAO:41 - ip => localhost
+21:21:57,171  INFO DAO:42 - banco => Championship
+21:21:57,173  INFO DAO:48 - configurando postgresql
+21:22:03,690  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:22:03,691  INFO DAO:39 - provedor => eclipselink
+21:22:03,693  INFO DAO:40 - sgbd => postgresql
+21:22:03,693  INFO DAO:41 - ip => localhost
+21:22:03,693  INFO DAO:42 - banco => Championship
+21:22:03,694  INFO DAO:48 - configurando postgresql
+21:22:20,625  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:22:20,633  INFO DAO:39 - provedor => eclipselink
+21:22:20,634  INFO DAO:40 - sgbd => postgresql
+21:22:20,635  INFO DAO:41 - ip => localhost
+21:22:20,635  INFO DAO:42 - banco => Championship
+21:22:20,636  INFO DAO:48 - configurando postgresql
+21:28:14,861  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+21:28:14,868  INFO DAO:39 - provedor => eclipselink
+21:28:14,870  INFO DAO:40 - sgbd => postgresql
+21:28:14,871  INFO DAO:41 - ip => localhost
+21:28:14,874  INFO DAO:42 - banco => Championship
+21:28:14,875  INFO DAO:48 - configurando postgresql

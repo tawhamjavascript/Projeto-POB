@@ -54,23 +54,21 @@ public class TelaJogo {
 	private JTextField textField_4;
 	private JButton button_2;
 
-
-
 	/**
 	 * Launch the application.
 	 */
-	//	public static void main(String[] args) {
-	//		EventQueue.invokeLater(new Runnable() {
-	//			public void run() {
-	//				try {
-	//					TelaJogo window = new TelaJogo();
-	//					window.frame.setVisible(true);
-	//				} catch (Exception e) {
-	//					e.printStackTrace();
-	//				}
-	//			}
-	//		});
-	//	}
+	// public static void main(String[] args) {
+	// EventQueue.invokeLater(new Runnable() {
+	// public void run() {
+	// try {
+	// TelaJogo window = new TelaJogo();
+	// window.frame.setVisible(true);
+	// } catch (Exception e) {
+	// e.printStackTrace();
+	// }
+	// }
+	// });
+	// }
 
 	/**
 	 * Create the application.
@@ -92,6 +90,7 @@ public class TelaJogo {
 				Fachada.inicializar();
 				listagem();
 			}
+
 			@Override
 			public void windowClosing(WindowEvent e) {
 				Fachada.finalizar();
@@ -121,17 +120,15 @@ public class TelaJogo {
 		table.setShowGrid(true);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
-
 		button = new JButton("Criar jogo");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					if(formattedTextField.getText().isEmpty() || 
+					if (formattedTextField.getText().isEmpty() ||
 							textField_1.getText().isEmpty() ||
 							textField_2.getText().isEmpty() ||
 							textField_3.getText().isEmpty() ||
-							textField.getText().isEmpty() )
-					{
+							textField.getText().isEmpty()) {
 						label.setText("campo vazio");
 						return;
 					}
@@ -141,11 +138,10 @@ public class TelaJogo {
 					String preco = textField_2.getText();
 					String nome1 = textField.getText();
 					String nome2 = textField_3.getText();
-					Jogo jogo = Fachada.criarJogo(data, local, 50000, Double.parseDouble(preco),nome1,nome2);
-					label.setText("jogo criado: "+jogo.getId());
+					Jogo jogo = Fachada.criarJogo(data, local, 50000, Double.parseDouble(preco), nome1, nome2);
+					label.setText("jogo criado: " + jogo.getId());
 					listagem();
-				}
-				catch(Exception ex) {
+				} catch (Exception ex) {
 					label.setText(ex.getMessage());
 				}
 			}
@@ -174,8 +170,7 @@ public class TelaJogo {
 
 		try {
 			formattedTextField = new JFormattedTextField(new MaskFormatter("##/##/####"));
-		} 
-		catch (ParseException e1) {
+		} catch (ParseException e1) {
 			label.setText("formato do campo data invalido");
 		}
 		formattedTextField.setBounds(67, 212, 80, 20);
@@ -221,20 +216,18 @@ public class TelaJogo {
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					if (table.getSelectedRow() >= 0){
-						String id = (String) table.getValueAt( table.getSelectedRow(), 0);
+					if (table.getSelectedRow() >= 0) {
+						String id = (String) table.getValueAt(table.getSelectedRow(), 0);
 						Jogo jogo = Fachada.localizarJogo(Integer.parseInt(id));
-						String codigos= "Ingressos de grupo:";
-						for(Ingresso ing : jogo.getIngressos())
-							if(ing instanceof IngressoGrupo)
-								codigos+="\n"+ing.getCodigo();
+						String codigos = "Ingressos de grupo:";
+						for (Ingresso ing : jogo.getIngressos())
+							if (ing instanceof IngressoGrupo)
+								codigos += "\n" + ing.getCodigo();
 
 						JOptionPane.showMessageDialog(frame, codigos);
-					}
-					else
+					} else
 						label.setText("selecione uma linha");
-				}
-				catch(Exception erro) {
+				} catch (Exception erro) {
 					label.setText(erro.getMessage());
 				}
 			}
@@ -247,20 +240,18 @@ public class TelaJogo {
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					if (table.getSelectedRow() >= 0){
-						String id = (String) table.getValueAt( table.getSelectedRow(), 0);
+					if (table.getSelectedRow() >= 0) {
+						String id = (String) table.getValueAt(table.getSelectedRow(), 0);
 						Jogo jogo = Fachada.localizarJogo(Integer.parseInt(id));
-						String codigos= "Ingressos individuais:";
-						for(Ingresso ing : jogo.getIngressos())
-							if(ing instanceof IngressoIndividual)
-								codigos+="\n"+ing.getCodigo();
+						String codigos = "Ingressos individuais:";
+						for (Ingresso ing : jogo.getIngressos())
+							if (ing instanceof IngressoIndividual)
+								codigos += "\n" + ing.getCodigo();
 
 						JOptionPane.showMessageDialog(frame, codigos);
-					}
-					else
+					} else
 						label.setText("selecione uma linha");
-				}
-				catch(Exception erro) {
+				} catch (Exception erro) {
 					label.setText(erro.getMessage());
 				}
 			}
@@ -307,12 +298,12 @@ public class TelaJogo {
 		textField_4.setBounds(343, 11, 86, 20);
 		frame.getContentPane().add(textField_4);
 		textField_4.setColumns(10);
-		
+
 		button_2 = new JButton("Apagar jogo");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (table.getSelectedRow() >= 0){
-					String id = (String) table.getValueAt( table.getSelectedRow(), 0);
+				if (table.getSelectedRow() >= 0) {
+					String id = (String) table.getValueAt(table.getSelectedRow(), 0);
 					System.out.println(id);
 					try {
 						Fachada.apagarJogo(Integer.parseInt(id));
@@ -332,14 +323,14 @@ public class TelaJogo {
 		frame.getContentPane().add(button_2);
 	}
 
-	//*****************************
-	public void listagem () {
-		try{
+	// *****************************
+	public void listagem() {
+		try {
 			List<Jogo> lista = Fachada.listarJogos();
 
-			//model contem todas as linhas e colunas da tabela
+			// model contem todas as linhas e colunas da tabela
 			DefaultTableModel model = new DefaultTableModel();
-			//colunas
+			// colunas
 			model.addColumn("id");
 			model.addColumn("data");
 			model.addColumn("loca");
@@ -348,27 +339,27 @@ public class TelaJogo {
 			model.addColumn("time1");
 			model.addColumn("time2");
 			model.addColumn("arrecadacao");
-			//linhas
-			for(Jogo jogo : lista) {
-				model.addRow(new Object[]{jogo.getId()+"", jogo.getData(), jogo.getLocal(), jogo.getEstoque(),jogo.getPreco(),
-						jogo.getTime1().getNome(), jogo.getTime2().getNome(), jogo.obterValorArrecadado()});
+			// linhas
+			for (Jogo jogo : lista) {
+				model.addRow(new Object[] { jogo.getId() + "", jogo.getData(), jogo.getLocal(), jogo.getEstoque(),
+						jogo.getPreco(),
+						jogo.getTime1().getNome(), jogo.getTime2().getNome(), jogo.obterValorArrecadado() });
 			}
 			table.setModel(model);
-			label_8.setText("resultados: "+lista.size()+ " jogos  - selecione uma linha");
-		}
-		catch(Exception erro){
+			label_8.setText("resultados: " + lista.size() + " jogos  - selecione uma linha");
+		} catch (Exception erro) {
 			label.setText(erro.getMessage());
 		}
 	}
 
-	public void listagemPorData () {
-		try{
-			String data= textField_4.getText();
+	public void listagemPorData() {
+		try {
+			String data = textField_4.getText();
 			List<Jogo> lista = Fachada.listarJogos(data);
 
-			//model contem todas as linhas e colunas da tabela
+			// model contem todas as linhas e colunas da tabela
 			DefaultTableModel model = new DefaultTableModel();
-			//colunas
+			// colunas
 			model.addColumn("id");
 			model.addColumn("data");
 			model.addColumn("loca");
@@ -377,15 +368,20 @@ public class TelaJogo {
 			model.addColumn("time1");
 			model.addColumn("time2");
 			model.addColumn("arrecadacao");
-			//linhas
-			for(Jogo jogo : lista) {
-				model.addRow(new Object[]{jogo.getId()+"", jogo.getData(), jogo.getLocal(), jogo.getEstoque(),jogo.getPreco(),
-						jogo.getTime1().getNome(), jogo.getTime2().getNome(), jogo.obterValorArrecadado()});
+			// linhas
+			for (Jogo jogo : lista) {
+				model.addRow(new Object[] { jogo.getId() + "", jogo.getData(), jogo.getLocal(), jogo.getEstoque(),
+						jogo.getPreco(),
+						jogo.getTime1().getNome(), jogo.getTime2().getNome(), jogo.obterValorArrecadado() });
 			}
 			table.setModel(model);
-			label_8.setText("resultados: "+lista.size()+ " jogos  - selecione uma linha");
-		}
-		catch(Exception erro){
+			label_8.setText("resultados: " + lista.size() + " jogos  - selecione uma linha");
+		} catch (Exception erro) {
+			DefaultTableModel model = (DefaultTableModel) table.getModel();
+			model.setRowCount(0); // clear the table
+			label.setText(erro.getMessage());
+			model.addRow(new Object[] { "", "", "" });
+			table.setModel(model);
 			label.setText(erro.getMessage());
 		}
 

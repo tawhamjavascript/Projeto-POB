@@ -191,7 +191,7 @@ public class Fachada {
 			throw new Exception("Jogo não existe");
 
 		}
-		System.out.println(jogo.getEstoque());
+		//System.out.println(jogo.getEstoque());
 
 		IngressoIndividual ingressoIndividual;
 		int codigo;

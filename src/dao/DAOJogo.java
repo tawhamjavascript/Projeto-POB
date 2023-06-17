@@ -24,7 +24,7 @@ public class DAOJogo extends DAO<Jogo> {
 
 
     public List<Jogo> jogosComUmaDataEspecifica(String data) {
-    	TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where data=:d", Jogo.class);
+    	TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where j.data=:d", Jogo.class);
 		q.setParameter("d", data);
 		return q.getResultList();
 

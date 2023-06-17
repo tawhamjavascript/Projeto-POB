@@ -143,7 +143,13 @@ public class TelaConsulta {
 														 consultaLocalTime(resultado1);
 
 													 } catch (Exception err) {
-														 System.out.println(err);
+														System.out.println(err);
+													    DefaultTableModel model = (DefaultTableModel) table.getModel();
+														model.setRowCount(0); // clear the table
+														label.setText(err.getMessage());
+														model.addRow(new Object[]{"", "", ""});
+														table.setModel(model);
+														 
 													 }
 
 													 break;
@@ -154,7 +160,12 @@ public class TelaConsulta {
 														 consultaDataTime(resultado2);
 
 													 } catch (Exception err) {
-														 System.out.println(err);
+														System.out.println(err);
+														DefaultTableModel model = (DefaultTableModel) table.getModel();
+														model.setRowCount(0); // clear the table
+														label.setText(err.getMessage());
+														model.addRow(new Object[]{"", "", ""});
+														table.setModel(model);
 													 }
 
 													 break;
@@ -174,7 +185,12 @@ public class TelaConsulta {
 														 consultaJogosTime(resultado4);
 
 													 } catch (Exception err) {
-														 System.out.println(err);
+														System.out.println(err);
+														DefaultTableModel model = (DefaultTableModel) table.getModel();
+														model.setRowCount(0); // clear the table
+														label.setText(err.getMessage());
+														model.addRow(new Object[]{"", "", ""});
+														table.setModel(model);
 													 }
 
 													 break;
@@ -209,9 +225,10 @@ public class TelaConsulta {
 				 **/
 
 		public void consultaLocalTime(List<Time> lista) {
+			DefaultTableModel model = new DefaultTableModel();
 			try{
 				// o model armazena todas as linhas e colunas do table
-				DefaultTableModel model = new DefaultTableModel();
+				
 
 				//adicionar colunas no model
 
@@ -238,15 +255,18 @@ public class TelaConsulta {
 				lblResultadosDaConsulta.setText("Resultados: "+lista.size()+"objetos");
 			} catch(Exception erro) {
 				label.setText(erro.getMessage());
+				model.addRow(new Object[]{"", "", ""});
+				table.setModel(model);
 
 
 			}
 		}
 
 		public void consultaDataTime(List<Time> lista) {
+			DefaultTableModel model = new DefaultTableModel();
 
 			try {
-				DefaultTableModel model = new DefaultTableModel();
+				
 
 				model.addColumn("nome");
 								
@@ -270,14 +290,17 @@ public class TelaConsulta {
 
 			} catch (Exception erro) {
 				System.out.println(erro.getMessage());
+				model.addRow(new Object[]{"", "", ""});
+				table.setModel(model);
 			}
 
 		}
 
 		public void consultaIngressos(List<Time> lista) {
+			DefaultTableModel model = new DefaultTableModel();
 			
 			try {
-				DefaultTableModel model = new DefaultTableModel();
+				
 
 				model.addColumn("times");
 				
@@ -294,14 +317,17 @@ public class TelaConsulta {
 
 			} catch (Exception erro) {
 				System.out.println(erro.getMessage());
+				model.addRow(new Object[]{"", "", ""});
+				table.setModel(model);
 			}
 			
 
 		}
 
 		public void consultaJogosTime(List<Jogo> lista) {
+			DefaultTableModel model = new DefaultTableModel();
 			try {
-				DefaultTableModel model = new DefaultTableModel();
+				
 
 				model.addColumn("data");
 				model.addColumn("local");
@@ -321,13 +347,16 @@ public class TelaConsulta {
 
 			} catch (Exception erro) {
 				System.out.println(erro.getMessage());
+				model.addRow(new Object[]{"", "", ""});
+				table.setModel(model);
 			}
 
 		}
 
 		public void consultaMaisDeUm(List<Jogo> lista) {
+			DefaultTableModel model = new DefaultTableModel();
 			try {
-				DefaultTableModel model = new DefaultTableModel();
+				
 
 				model.addColumn("data");
 				model.addColumn("local");
@@ -347,6 +376,8 @@ public class TelaConsulta {
 
 			} catch (Exception erro) {
 				System.out.println(erro.getMessage());
+				model.addRow(new Object[]{"", "", ""});
+				table.setModel(model);
 			}
 		}}
 		

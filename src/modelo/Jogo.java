@@ -116,11 +116,11 @@ public class Jogo {
 	}
 	
 	public void setTime1(Time time1) {
-		this.times.add(time1);
+		this.times.add(0, time1);
 	}
 
 	public void setTime2(Time time2) {
-		this.times.add(time2);
+		this.times.add(1, time2);
 	}
 
 	public ArrayList<Ingresso> getIngressos() {

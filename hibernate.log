@@ -850,3 +850,102 @@ Exception Description: The attribute [ingressos] in entity class [class modelo.J
 21:28:14,871  INFO DAO:41 - ip => localhost
 21:28:14,874  INFO DAO:42 - banco => Championship
 21:28:14,875  INFO DAO:48 - configurando postgresql
+19:20:21,303  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:20:21,319  INFO DAO:39 - provedor => eclipselink
+19:20:21,320  INFO DAO:40 - sgbd => postgresql
+19:20:21,322  INFO DAO:41 - ip => localhost
+19:20:21,322  INFO DAO:42 - banco => Championship
+19:20:21,327  INFO DAO:48 - configurando postgresql
+19:20:23,556  INFO DAO:74 - DAO.open - problema de configuracao: Exception [EclipseLink-4002] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+Error Code: 0
+19:20:46,676  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:20:46,719  INFO DAO:39 - provedor => eclipselink
+19:20:46,726  INFO DAO:40 - sgbd => postgresql
+19:20:46,733  INFO DAO:41 - ip => localhost
+19:20:46,742  INFO DAO:42 - banco => Championship
+19:20:46,756  INFO DAO:48 - configurando postgresql
+19:21:45,456  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:21:45,459  INFO DAO:39 - provedor => eclipselink
+19:21:45,459  INFO DAO:40 - sgbd => postgresql
+19:21:45,460  INFO DAO:41 - ip => localhost
+19:21:45,460  INFO DAO:42 - banco => Championship
+19:21:45,461  INFO DAO:48 - configurando postgresql
+19:22:22,193  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:22:22,202  INFO DAO:39 - provedor => eclipselink
+19:22:22,203  INFO DAO:40 - sgbd => postgresql
+19:22:22,204  INFO DAO:41 - ip => localhost
+19:22:22,204  INFO DAO:42 - banco => Championship
+19:22:22,206  INFO DAO:48 - configurando postgresql
+19:22:43,832  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:22:43,842  INFO DAO:39 - provedor => eclipselink
+19:22:43,842  INFO DAO:40 - sgbd => postgresql
+19:22:43,843  INFO DAO:41 - ip => localhost
+19:22:43,844  INFO DAO:42 - banco => Championship
+19:22:43,846  INFO DAO:48 - configurando postgresql
+19:23:26,873  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:23:26,878  INFO DAO:39 - provedor => eclipselink
+19:23:26,879  INFO DAO:40 - sgbd => postgresql
+19:23:26,880  INFO DAO:41 - ip => localhost
+19:23:26,880  INFO DAO:42 - banco => Championship
+19:23:26,881  INFO DAO:48 - configurando postgresql
+19:23:37,634  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:23:37,639  INFO DAO:39 - provedor => eclipselink
+19:23:37,639  INFO DAO:40 - sgbd => postgresql
+19:23:37,640  INFO DAO:41 - ip => localhost
+19:23:37,641  INFO DAO:42 - banco => Championship
+19:23:37,641  INFO DAO:48 - configurando postgresql
+19:24:10,364  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:24:10,392  INFO DAO:39 - provedor => eclipselink
+19:24:10,393  INFO DAO:40 - sgbd => postgresql
+19:24:10,394  INFO DAO:41 - ip => localhost
+19:24:10,394  INFO DAO:42 - banco => Championship
+19:24:10,395  INFO DAO:48 - configurando postgresql
+19:24:49,928  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:24:49,931  INFO DAO:39 - provedor => eclipselink
+19:24:49,932  INFO DAO:40 - sgbd => postgresql
+19:24:49,932  INFO DAO:41 - ip => localhost
+19:24:49,932  INFO DAO:42 - banco => Championship
+19:24:49,933  INFO DAO:48 - configurando postgresql
+19:25:02,666  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:25:02,666  INFO DAO:39 - provedor => eclipselink
+19:25:02,666  INFO DAO:40 - sgbd => postgresql
+19:25:02,667  INFO DAO:41 - ip => localhost
+19:25:02,667  INFO DAO:42 - banco => Championship
+19:25:02,668  INFO DAO:48 - configurando postgresql
+19:25:14,523  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:25:14,524  INFO DAO:39 - provedor => eclipselink
+19:25:14,525  INFO DAO:40 - sgbd => postgresql
+19:25:14,526  INFO DAO:41 - ip => localhost
+19:25:14,526  INFO DAO:42 - banco => Championship
+19:25:14,527  INFO DAO:48 - configurando postgresql
+19:27:44,746  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:27:44,762  INFO DAO:39 - provedor => eclipselink
+19:27:44,763  INFO DAO:40 - sgbd => postgresql
+19:27:44,763  INFO DAO:41 - ip => localhost
+19:27:44,763  INFO DAO:42 - banco => Championship
+19:27:44,763  INFO DAO:48 - configurando postgresql
+19:27:48,289  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:27:48,289  INFO DAO:39 - provedor => eclipselink
+19:27:48,290  INFO DAO:40 - sgbd => postgresql
+19:27:48,291  INFO DAO:41 - ip => localhost
+19:27:48,293  INFO DAO:42 - banco => Championship
+19:27:48,293  INFO DAO:48 - configurando postgresql
+19:28:19,190  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:28:19,190  INFO DAO:39 - provedor => eclipselink
+19:28:19,191  INFO DAO:40 - sgbd => postgresql
+19:28:19,191  INFO DAO:41 - ip => localhost
+19:28:19,191  INFO DAO:42 - banco => Championship
+19:28:19,191  INFO DAO:48 - configurando postgresql
+19:28:51,620  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:28:51,622  INFO DAO:39 - provedor => eclipselink
+19:28:51,622  INFO DAO:40 - sgbd => postgresql
+19:28:51,623  INFO DAO:41 - ip => localhost
+19:28:51,623  INFO DAO:42 - banco => Championship
+19:28:51,623  INFO DAO:48 - configurando postgresql
+19:29:00,271  INFO DAO:29 - DAO.open - lendo arquivo dados.properties: 
+19:29:00,272  INFO DAO:39 - provedor => eclipselink
+19:29:00,273  INFO DAO:40 - sgbd => postgresql
+19:29:00,273  INFO DAO:41 - ip => localhost
+19:29:00,273  INFO DAO:42 - banco => Championship
+19:29:00,273  INFO DAO:48 - configurando postgresql

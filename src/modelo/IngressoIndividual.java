@@ -31,7 +31,7 @@ public class IngressoIndividual extends Ingresso {
 	}
 
 	public void setJogo(Jogo jogo) {
-		this.jogos.add(jogo);
+		this.jogos.add(0, jogo);
 		jogo.setEstoque(jogo.getEstoque() - 1 );
 	}
 

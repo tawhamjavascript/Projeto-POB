@@ -193,6 +193,11 @@ public class Fachada {
 		}
 		//System.out.println(jogo.getEstoque());
 
+		if (jogo.getEstoque() == 0) {
+			DAO.rollback();
+			throw new Exception("O estoque não pode ser 0");
+		}
+
 		IngressoIndividual ingressoIndividual;
 		int codigo;
 
@@ -208,6 +213,8 @@ public class Fachada {
 		ingressoIndividual = new IngressoIndividual(codigo);
 		// relacionar este ingresso com o jogo e vice-versa
 
+		
+		
 		ingressoIndividual.setJogo(jogo);
 		jogo.adicionar(ingressoIndividual);
 		daoingressoindividual.create(ingressoIndividual);
@@ -223,7 +230,6 @@ public class Fachada {
 			throw e;
 		}
 
-		System.out.println("aqui3");
 
 		return ingressoIndividual;
 
